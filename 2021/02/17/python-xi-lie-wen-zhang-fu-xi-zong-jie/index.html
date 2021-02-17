@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="C语言系列文章总结, Java Python AI Code">
+    <meta name="keywords" content="Python语言系列文章总结, Java Python AI Code">
     <meta name="description" content="Java Python AI Code CV">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>C语言系列文章总结 | 小小博客</title>
+    <title>Python语言系列文章总结 | 小小博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">C语言系列文章总结</h1>
+                    <h1 class="description center-align post-title">Python语言系列文章总结</h1>
                 </div>
             </div>
         </div>
@@ -454,8 +454,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                                <span class="chip bg-color">C语言</span>
+                            <a href="/tags/Python/">
+                                <span class="chip bg-color">Python</span>
                             </a>
                         
                     </div>
@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-12
+                    2021-02-17
                 </div>
                 
 
@@ -500,401 +500,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C语言知识点复习梳理"><a href="#C语言知识点复习梳理" class="headerlink" title="C语言知识点复习梳理"></a>C语言知识点复习梳理</h1><blockquote>
-<p>C语言的知识点讲完了，接下来就是做一下整理与总结，然后就会进入其他知识的学习。</p>
+                <h1 id="Python系列文章复习总结"><a href="#Python系列文章复习总结" class="headerlink" title="Python系列文章复习总结"></a>Python系列文章复习总结</h1><blockquote>
+<p>终于，python文章已经更新完了，这里做出一下总结复习，相当于是整合出一个目录以便大家使用。</p>
 </blockquote>
-<hr>
 <center><b>文章的章节梳理在下文中，针对文章的视频版梳理在B站 (B站账号：小小猿笔记) 。</b></center>
 
+<p>视频版Python语言知识点快速复习连接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QU4y1x7kW">Python语言程序设计基础知识点复习梳理</a></p>
+<blockquote>
+<p><strong>主要内容：</strong></p>
+<ul>
+<li>基础知识 &amp; 环境搭建。</li>
+<li>PyCharm的基础使用。</li>
+<li>Python的基础语法。</li>
+<li>Python的高级语法。</li>
+<li>Python的文件 &amp; 异常。</li>
+<li>飞机大战。</li>
+<li>爬虫初窥。</li>
+</ul>
+</blockquote>
+<h2 id="基础知识-amp-环境搭建"><a href="#基础知识-amp-环境搭建" class="headerlink" title="基础知识 &amp; 环境搭建"></a>基础知识 &amp; 环境搭建</h2><ul>
+<li><p>首先，既然我们来学习<code>Python</code>，那大家肯定对他有着一定的了解，但是我还是觉得有必要再介绍一下Python可以做些什么。</p>
+</li>
+<li><p>然后，python与C语言不太一样，由于win电脑就是C语言写的，所以C语言的程序可以直接在win电脑上执行，然后我们为了方便写代码就安装了VC6.0来敲写代码。</p>
+</li>
+<li><p>但是，python程序是不能直接在win电脑上运行的，所以这个时候就需要安装python的运行环境，让他来执行python程序，同样，为了敲代码方便，所以我们安装PyCharm来敲代码。</p>
+</li>
+</ul>
+<p><strong>至于细节，这篇文章中就有提到。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485130&idx=1&sn=21c753a0a70b46863f57ed0d0cd6747b&chksm=fca93188cbdeb89e2f5e83eed92ea07fde13b378e0864eb522d65b0f6090feba6405b3fe227e&token=1839830084&lang=zh_CN#rd">Python零基础入门-01-基础知识&amp;环境搭建</a> </p>
+<h2 id="PyCharm的基础使用"><a href="#PyCharm的基础使用" class="headerlink" title="PyCharm的基础使用"></a>PyCharm的基础使用</h2><ul>
+<li>首先，PyCharm与VC6.0都只是一个工具而已，他们的目的是用来敲代码，但是PyCharm是一款功能很强大的编译器，不像VC6.0那么简单使用。</li>
+<li>甚至，新手都不知道怎么在PyCharm中找到敲代码的地方，所以这里的文章就会首先给你讲讲这个软件的一些简单用法，让你不至于太恐慌。</li>
+<li>回顾，上篇文章我们提到学习python要装两个东西：python运行环境 以及 pycharm。所以在使用pycharm的时候首先就需要将python运行环境引入到pycharm中，不然你敲完的代码都没法运行的。</li>
+<li>同样，也会教你一些简单的有用的操作。</li>
+</ul>
+<p><strong>至于细节，这篇文章中就有提到。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485165&idx=1&sn=b60fb4170ef5951db79decd4f36f1c04&chksm=fca931afcbdeb8b975e9ced4f3e2943524e181623a41161fb0c386f036ab09729a8e07f64db8&token=1839830084&lang=zh_CN#rd">Python零基础入门-02-PyCharm基础使用</a> </p>
+<h2 id="Python的基础语法"><a href="#Python的基础语法" class="headerlink" title="Python的基础语法"></a>Python的基础语法</h2><ul>
+<li>首先，任何一门编程语言的基础语法都是差不多的，都是一些 <code>数据类型，输入输出，选择循环结构，以及函数文件</code>等等。唯一不同的就是每个编程语言怎么定义这些语法，怎么使用这些语法上，有着区别。python的定义与使用是最简单的。</li>
+<li>然后，这一节就会带着大家了解一些基础的语法，并且掺杂着案例，让大家见一见python的简洁之处。</li>
+</ul>
+<p><strong>至于细节，这篇文章中就有提到。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485249&idx=1&sn=be02f92b7b066177bd7f7b2f7805839e&chksm=fca93003cbdeb9156e6a3569f419dedc533a8a9e4bec4b2d4d61d47c020319fe4f693bb7201c&token=1839830084&lang=zh_CN#rd">Python零基础入门-03-Python基础语法</a> </p>
+<h2 id="Python的高级语法"><a href="#Python的高级语法" class="headerlink" title="Python的高级语法"></a>Python的高级语法</h2><ul>
+<li>首先，刚才说了每个编程语言的基础语法都大相径庭，但是他们的高级语法就各有千秋了，其他的就不说了，这里就会讲一讲python的高级语法。</li>
+<li>然后，任何编程语言的高级语法，不管再怎么多杂，唯一不变的就是，都必须有面向对象的内容。</li>
+<li>最后，什么是面向对象呢？ 面向对象其实是一种思想，并不是具体的语法，大家带着这个疑问就往下看文章吧。</li>
+</ul>
+<p><strong>至于细节，这篇文章中就有提到。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485312&idx=1&sn=aadb0cef5258f6e4da4a5c0a1c6701e1&chksm=fca930c2cbdeb9d48f7b9c5c338f7927f2720fb23bcdf46244628dcba94e863ae71590e531be&token=1839830084&lang=zh_CN#rd">Python零基础入门-04-Python高级语法</a> </p>
+<h2 id="Python的文件-amp-异常"><a href="#Python的文件-amp-异常" class="headerlink" title="Python的文件 &amp; 异常"></a>Python的文件 &amp; 异常</h2><ul>
+<li>首先，前边讲基础语法的时候我们并没有讲文件，因为文件一般都是最后学的，哈哈哈哈。</li>
+<li>文件，其实就是将用户操作完的数据给存到硬盘上，下次用户在用的时候再从文件中读取进来，以达到存档读档的效果。听我讲的热血澎湃的，其实啥也不是，就给你讲讲基础语法而已，哈哈哈哈。</li>
+<li>异常，其实就是为了解决当程序整体出现错误的时候，不让程序崩溃，而提出的一种解决方式。</li>
+</ul>
+<p><strong>至于细节，这篇文章中就有提到。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485384&idx=1&sn=d9c4ef753b1eafc58202676fd9516f21&chksm=fca9308acbdeb99c7478a719d4e10cd42c4e9a0a1cfaba186b299da92e53407c02af487c6353&token=1839830084&lang=zh_CN#rd">Python零基础入门-05-结尾(文件&amp;异常)</a> </p>
+<h2 id="飞机大战"><a href="#飞机大战" class="headerlink" title="飞机大战"></a>飞机大战</h2><ul>
+<li>在上次我推荐的python基础入门书……，后边有一个飞机大战的项目，但是我发现他运行不起来了，因为他的好像是基于python2的版本，然而现在都用的python3了，所以有一些语法已经跑不通了。</li>
+<li>然后我自己按照他的思路来实现了一下飞机大战的基础功能，并且给了一些视频的讲解，让大家好理解一点。</li>
+</ul>
+<blockquote>
+<p><strong>tips</strong>：pygame不要成为你的学习重点，把我的源码弄个下来跑一跑，了解一点代码以及思路就好，重点还是放在下一个爬虫的项目。</p>
+</blockquote>
+<p><strong>至于细节，这个视频中就有提到。</strong></p>
+<ul>
+<li>飞机大战B站视频链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QU4y1x7kW?p=15">python飞机大战</a>.</li>
+<li>飞机大战源码链接：<a target="_blank" rel="noopener" href="https://github.com/xiaoxiaojiea/SharingFolder/tree/main/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%88%86%E4%BA%AB/python%E7%9B%B8%E5%85%B3">公众号分享</a></li>
+</ul>
+<h2 id="爬虫初窥"><a href="#爬虫初窥" class="headerlink" title="爬虫初窥"></a>爬虫初窥</h2><ul>
+<li>爬虫可以称之为一个就业方向，各大公司也是有需求的，但是要彻底学会是不太现实的，因为随着爬虫技术的崛起，反爬虫技术也在慢慢发展，现在的网站也是越来越难爬了。</li>
+<li>但是，对于新手来说，需要学些什么，以及每个技术有什么用还是需要有一个清晰的认识的。</li>
+<li>下边的文章以及视频可以给你一个清理明了的学习计划。</li>
+</ul>
+<p><strong>至于细节，这个视频中就有提到。</strong></p>
+<ul>
+<li>爬虫B站视频链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rb4y197s7">Python爬虫快速入门实战教程(附赠进阶教程)</a></li>
+<li>爬虫源码链接：<a target="_blank" rel="noopener" href="https://github.com/xiaoxiaojiea/SharingFolder/tree/main/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%88%86%E4%BA%AB/python%E7%9B%B8%E5%85%B3">公众号分享</a></li>
+</ul>
+<p><strong>视频中提到的学习资料如下</strong>：</p>
+<ul>
+<li>教程获取方式：关注公众号 “ <strong>小小猿笔记</strong> ”，或者扫下边的码，然后在公众号内部回复 “ <strong>崔庆才爬虫</strong> ”，即可获取。</li>
+<li>最新版爬虫教程链接： <a target="_blank" rel="noopener" href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=46&sid=460-PC_search_list-0#/sale">52讲轻松搞定网络爬虫</a> . （这个是官网，但是网上<strong>免费版</strong>的资源多的很）</li>
+</ul>
+<center>公众号二维码</center>
+
+<img src="https://i.loli.net/2021/02/17/NtvE2ToiLVrfWmg.jpg" alt="公众号二维码 (2)" style="zoom:80%;" />
 
 
-<p>视频版C语言知识点快速复习连接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ma4y1s7YQ">C语言程序设计基础知识点复习梳理</a></p>
-<p><strong>本文目录如下：</strong></p>
-<blockquote>
-<ol>
-<li>基础知识。</li>
-<li>顺序程序设计。</li>
-<li>数据类型。</li>
-<li>标准输入输出。</li>
-<li>进制转换。</li>
-<li>选择结构。</li>
-<li>循环结构。</li>
-<li>数组。</li>
-<li>函数。</li>
-<li>指针</li>
-<li>结构体。</li>
-<li>文件。</li>
-</ol>
-</blockquote>
-<h2 id="0-题外话"><a href="#0-题外话" class="headerlink" title="0. 题外话"></a>0. 题外话</h2><p>这里就是说一些我觉得很基础的问题，无关紧要，但是希望可以解决你的疑惑。</p>
-<ul>
-<li>有什么好的C语言书籍推荐吗？</li>
-</ul>
-<blockquote>
-<p>没有什么好的书，新手要么看一些好的文章，要么看视频。书籍只是用来检索知识点复习巩固的，直接看书看不下去的。至于用什么书嘛，谭浩强的就行，大学都用的这个。</p>
-</blockquote>
-<ul>
-<li>学知识是在看到不懂语法怎么办。</li>
-</ul>
-<blockquote>
-<p>你要明白一件事情，你学的新知识，如果实在弄不明白为什么，那就记住他，不要浪费过多的时间在这个上边，因为这些知识经历了数十载的洗礼都没有被推翻，说明他有存在的价值，只不过现在你的知识储备还不够你理解他而已。</p>
-</blockquote>
-<blockquote>
-<p>不管是现实世界还是计算机世界，现有的所有知识都是人为定义出来的，然后经过大家的推敲觉得这个事情是正确的，然后就会被广泛使用。如果有一天你发现了现实世界某个知识定义的有问题，那么你也可以提出来，在学术界的审判之后，如果觉得你是正确的，那么，你就会被载入史册，并且你提出的事情也会被大家广泛使用。</p>
-</blockquote>
-<h2 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h2><ul>
-<li>所谓的基础知识，就是我们之后学习C语言、甚至进入编程行业所必须具备的一些前提知识。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：你想认识一个经常偶遇的女生，但是你连说话的勇气都没有，那说不定下次再见到的时候，女生就会挽着别的男生的手了。</p>
-</blockquote>
-<p>这个例子中你去说话就是一个前提条件。编程也是这样，你不了解一些计算机的知识、你电脑上不装编译器（编译器就是敲代码的地方），那你还是不要学了，浪费时间。因为编程是在实际编写代码中成长的，而不是看书成长的。</p>
-<p><strong>所以，需要多少基础知识呢？</strong></p>
-<p>其实刚开始不是很多，都是一些常识的内容，十八九岁接触过电脑的同学都应该有所了解的知识而已。</p>
-<ul>
-<li>首先，为什么学习C语言。</li>
-</ul>
-<blockquote>
-<p>C语言是IT行业人必会的一门语言，C语言可以不用，但是不能不会。当然它的优势可以在文章中找到。</p>
-</blockquote>
-<ul>
-<li>其次，计算机的组成器件。</li>
-</ul>
-<blockquote>
-<p>都要学编程了，不能连最基本的计算机组成都不知道吧。</p>
-</blockquote>
-<ul>
-<li>最后，编译器的安装。</li>
-</ul>
-<blockquote>
-<p>不仅仅是C语言要装编译器，只要你接触编程，不管学什么语言，第一步就是装编译器输出 “Hello World！”。</p>
-</blockquote>
-<p>但是VC6.0原版只针对win7，所以win10使用的时候需要破解，具体安装包怎么下载、安装在我文章中看。</p>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483826&idx=1&sn=124cd456975c66d9763b624bb2b6fd67&chksm=fca936f0cbdebfe603467b5b6edd2fc89680e854bfa72e28eec80cc46ab28a854cafa59c09d6&scene=21#wechat_redirect">C语言零基础入门—基础知识与环境搭建 </a></p>
-<h2 id="2-顺序程序设计"><a href="#2-顺序程序设计" class="headerlink" title="2. 顺序程序设计"></a>2. 顺序程序设计</h2><ul>
-<li>顺序程序设计，说白了就是写代码的过程，与人做一件事情的流程很像。人处理一件事情基本都是从前往后做的，代码也是一样，写在前边的代码会被先执行到，后边的代码就会被晚一点执行到。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：一个很经典的人物——小明同学；</p>
-<p>小明早晨起床去学校的步骤是：穿衣服—&gt;洗漱—&gt;吃早餐—&gt;出门。</p>
-<p>如果有一天小明睡的一脸懵逼，起床之后直接出门了，衣服没穿也没洗漱也没吃早餐，那这就是小明做事情的顺序产生了错误。</p>
-</blockquote>
-<p>所以，人做事情顺序有误就会闹笑话；程序执行的顺序有问题，就会出现我们常说的一个词——<strong>Bug</strong>。</p>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>了解程序应该在哪里编写。</li>
-</ul>
-<blockquote>
-<p>绝大部分编程语言编写的时候，都会有一个指定的程序开始的位置 “main”，也就是编译器执行代码的时候会到 main 中寻找代码来执行。所以我们要把我们的代码写在这个里边。</p>
-</blockquote>
-<ul>
-<li>C程序运行需要的一些前提。</li>
-</ul>
-<blockquote>
-<p>前一问说了，代码要写在 main 里边，那么main要放在哪里呢？文章中就会讲到。</p>
-</blockquote>
-<ul>
-<li>了解编写程序的思路。</li>
-</ul>
-<blockquote>
-<p>也就是说编写代码其实跟人做一件事情是一样的，只不过我们写代码的目的是让程序帮我们循环往复的做同一件事情而已。</p>
-</blockquote>
-<p><strong>OK，所有的知识点，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483839&idx=1&sn=33f6255409746d21f37ed360c25ae54c&scene=21#wechat_redirect">C语言零基础入门—顺序程序设计</a></p>
-<h2 id="3-数据类型"><a href="#3-数据类型" class="headerlink" title="3. 数据类型"></a>3. 数据类型</h2><ul>
-<li>现实世界中有整数、小数、分数、复数等等数据类型；这些数据类型之所以会存在，不是凭空产生的，是一些很伟大的数学家定义出来的，之所以可以被全世界用这么久并且将会一直用下去，是因为他符合<strong>人</strong>的认知并且切合实际。</li>
-<li>编程界也可以看作是一个小世界，那么这个小世界也应该存在着一些数据类型，只不过程序中的数据类型的主体不是人，而是计算机了。由于计算机的存储方式以及存储长度的限制，C语言就会定义一些尽可能切合实际的、大家认可的数据类型来供C语言编写程序过程中使用。这就是数据类型产生的原因。</li>
-</ul>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>C语言中的数据类型深层次的定义是什么。</li>
-</ul>
-<blockquote>
-<p>数据类型 = 一类数 + 这类数可以执行的操作。</p>
-</blockquote>
-<ul>
-<li>常用数据类型有哪些，以及他们占用的字节是多少。</li>
-</ul>
-<blockquote>
-<p>整形int占用4字节；浮点型float占用4字节；字符型char占用1字节。</p>
-</blockquote>
-<p><strong>OK，所有的知识都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483847&idx=1&sn=0db471348e25eae49082b080b6df9701&scene=21#wechat_redirect">C语言零基础入门—数据类型</a></p>
-<h2 id="4-标准输入输出"><a href="#4-标准输入输出" class="headerlink" title="4. 标准输入输出"></a>4. 标准输入输出</h2><ul>
-<li>经过上边的学习你应该会知道任何数据在计算机中的存放形式都是二进制的0/1串，那么当我们想要输出一个文字的时候，总不能把这些0/1串直接输出吧。这个时候就是格式化的作用了，它可以根据用户选择的格式化方式将0/1串转化为用户想要的数据形式。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：用户想要一串英文字符，那么用户就会规定好输出的数据是字符串格式的，此时计算机取到内存中的0/1串的时候，就会将这些0/1串转化为英文字符，然后再输出。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>数据在计算机中的存取过程。</li>
-</ul>
-<blockquote>
-<p><strong>存</strong>：将用户数据转化为二进制数据。</p>
-</blockquote>
-<blockquote>
-<p><strong>取</strong>：将二进制数据转化为用户数据。</p>
-</blockquote>
-<ul>
-<li>输入输出语法的学习。</li>
-</ul>
-<blockquote>
-<p>pintf（）；    scanf（）；putchar（）；getchar（）。</p>
-</blockquote>
-<p><strong>OK，所有的知识都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483855&idx=1&sn=6f2ec282c59f075b051740c50b98e226&scene=21#wechat_redirect">C语言零基础入门—标准输入输出</a></p>
-<h2 id="5-进制转换"><a href="#5-进制转换" class="headerlink" title="5. 进制转换"></a>5. 进制转换</h2><ul>
-<li>现实世界中使用的是十进制，计算机使用是二进制，于是就要学习十进制与二进制之间的转换。</li>
-<li>在现实世界中，如果想要描述一个很大的数，我们知道用大一点的单位来描述。计算机也是一样，如果直接用二进制描述一个数据有点繁琐，所以就会产生一些较大的单位，比如：八进制，十六进制。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：现实世界中10000用万做单位可以描述为10万。计算机中二进制的数据 00110001 使用十六进制表示就是 31，确实简洁许多。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>学会进制之间的转换。</li>
-</ul>
-<blockquote>
-<p>十进制——二进制之间的转化。</p>
-</blockquote>
-<blockquote>
-<p>二进制——八进制——十六进制之间的转换。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483866&idx=1&sn=473b9cac686d9e12a3f136a33d4d8b45&scene=21#wechat_redirect">C语言零基础入门——6.进制转换-1</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483884&idx=1&sn=1f15723f2c93a8d1fbfaf9fcaf1d9bcf&scene=21#wechat_redirect">C语言零基础入门——6.进制转换-2</a></p>
-<h2 id="6-选择结构"><a href="#6-选择结构" class="headerlink" title="6. 选择结构"></a>6. 选择结构</h2><ul>
-<li>选择结构就是从众多数据中选择出符合需求的数据来进行下一步操作。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：从整个班级的成绩单中选择出 数学成绩&gt;60分的同学，这个过程就是选择结构需要做的事情。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>选择结构的基础语法与使用：</li>
-</ul>
-<blockquote>
-<p>要学会两个基本选择结构的使用：if…else 与 switch。</p>
-</blockquote>
-<ul>
-<li>要学会拼接选择的条件：</li>
-</ul>
-<blockquote>
-<p>比如：对于 数学成绩&gt;60，英语成绩&gt;60 。这次的选择就有两个选择条件来控制得到的结果。这两个条件之间的关系可以是多种多样的，我们需要学会按照正确的需求来拼接他们。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483940&idx=1&sn=db53ff88e87f2d144388e1863861120d&scene=21#wechat_redirect">C语言零基础入门—选择结构程序设计-1</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483949&idx=1&sn=49e64f17d9a3a89d7c5284f7b4f81a76&scene=21#wechat_redirect">C语言零基础入门—选择结构程序设计-2</a></p>
-<h2 id="7-循环结构"><a href="#7-循环结构" class="headerlink" title="7. 循环结构"></a>7. 循环结构</h2><ul>
-<li>日常生活中有很多事情都是重复，再重复。在程序编写中也是这个样子，有一些代码或许会被重复执行成千上万遍，这个时候就可以用循环结构去代替一些重复执行的代码，只需要保留一份代码，然后令这份代码循环执行多次即可。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：如果需要输出100个人的姓名，经过上边学习的输出语句可能会有人想着，要不然把输出语句printf写100次就好了；当然这是一种方法，但是，太麻烦了，使用循环结构一行代码就搞定了。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>循环结构的语法以及使用：</li>
-</ul>
-<blockquote>
-<p>有三种形式的循环语句，主要记住for循环的用法。while循环理解即可，基本上百分之90的程序for都能解决。</p>
-</blockquote>
-<ul>
-<li>嵌套循环要会使用：</li>
-</ul>
-<blockquote>
-<p>就是在循环结构里边再放循环。</p>
-</blockquote>
-<ul>
-<li>三个循环的差异以及特性：</li>
-</ul>
-<blockquote>
-<p>要知道for循环可以指定循环的次数；while循环次数不确定；do…while会先循环一次在进入判断条件。</p>
-</blockquote>
-<ul>
-<li>循环的中断：</li>
-</ul>
-<blockquote>
-<p>循环有两种结束方式，第一种是 循环次数或者循环条件 不满足了，就停止循环了；还有一种就是强制循环的停止。</p>
-</blockquote>
-<p>强制停止有两种方式：<strong>break与continue</strong>。</p>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483968&idx=1&sn=a9db2ada7c0c3d3b5f0b3f147c07b59a&scene=21#wechat_redirect">C语言零基础入门—循环结构程序设计-1</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247483977&idx=1&sn=7adb09f602a23bceadb5c67fe31fde1e&scene=21#wechat_redirect">C语言零基础入门—循环结构程序设计-2</a></p>
-<h2 id="8-数组"><a href="#8-数组" class="headerlink" title="8.数组"></a>8.数组</h2><ul>
-<li>随着深入的学习你会发现数据越来越多，有的数据格式相同、并且表达的含义相同。如果可以将这些数据存放在一起统一命名，就会很方便。于是数组的概念就产生了。</li>
-<li>数组就是一组数据的集合，并且这个数据集合是有顺序的，集合中的所有数据的数据类型都是相同的。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：班级内全部同学的数学成绩就可以用一个数组存放。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>一维数组的定义与使用：</li>
-</ul>
-<blockquote>
-<p>首先需要明白数组的概念，以及一维数组怎么定义以及怎么使用。</p>
-</blockquote>
-<ul>
-<li>二维数组的定义与使用：</li>
-</ul>
-<blockquote>
-<p>同样掌握并且理解二维数组的定义以及使用。</p>
-</blockquote>
-<ul>
-<li>数组的存储原理：</li>
-</ul>
-<blockquote>
-<p>要彻底明白数组在内存中的存储原理以及数组元素的索引原理。</p>
-</blockquote>
-<ul>
-<li>多维数组以及其他数据类型的数组：</li>
-</ul>
-<blockquote>
-<p>数组中的每个元素的数据类型不仅仅可以是数字，也可以是其他的。</p>
-</blockquote>
-<ul>
-<li>字符串以及字符串操作：</li>
-</ul>
-<blockquote>
-<p>当我们将char数组中的每一个位置存放一个字符的时候，这个数组就可以被看作是字符串了。于是针对字符串就会产生一系列的操作。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484037&idx=1&sn=b20a1068e09add746179e0995bf58574&scene=21#wechat_redirect">C语言零基础入门—数组-01</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484069&idx=1&sn=9d6cc51ccd94e5181d4b62369b5a3d44&chksm=fca935e7cbdebcf1db8d46d47594fc9fb2029d751f382ba1abe9f8232a5329dc8e81ff1ae00f&scene=21#wechat_redirect">C语言零基础入门—数组-02</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484090&idx=1&sn=6f0c8ac2ff3666e2c6faa89456bc418c&chksm=fca935f8cbdebcee5fda6787e2ce4b3ead884993013689b690cc371e4fc41028fe6969c7f200&scene=21#wechat_redirect">C语言零基础入门—数组-03</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484121&idx=1&sn=50de0d42c1e4ba2284d9ddf83e424abb&chksm=fca9359bcbdebc8d8e5a3e529de8b778dc32a062f8b739422fd058971fdd531c045ad0e2cbe5&scene=21#wechat_redirect">C语言零基础入门—数组-04</a></p>
-<h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9. 函数"></a>9. 函数</h2><ul>
-<li>随着学习的深入，发现main中放的代码越来越多，并且有很多代码重复写了多次，导致main越来越臃肿；于是我们就打算把main中具有相同功能的代码抽取出来，这就叫做函数，给这段函数起一个名字，然后使用的时候只用调用这个函数名字就可以了。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：有一段代码功能是求两个数的和，于是就可以把这段代码抽取出来形成一个函数，起名为sum，然后每次求和的时候调用一下sum就好了。而不用重复的写sum中的代码段。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>有关函数的基本知识：</li>
-</ul>
-<blockquote>
-<p>要明白有无返回值的概念，实参形参的概念，main也是一个函数。</p>
-</blockquote>
-<ul>
-<li>函数的简单定义与使用：</li>
-</ul>
-<blockquote>
-<p>函数的简单定义以及使用，就是自己完成一些简单的功能函数。</p>
-</blockquote>
-<ul>
-<li>函数的复杂使用：</li>
-</ul>
-<blockquote>
-<p>嵌套，递归，函数中传递数组参数都是一些难的操作。</p>
-</blockquote>
-<ul>
-<li>函数的一些小细节：</li>
-</ul>
-<blockquote>
-<p>最后了解一下函数的声明式定义，以及全局、局部变量的概念。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484162&idx=1&sn=d8846981f59b4646a61351d999d75280&chksm=fca93440cbdebd561e460b4091c9533d063d9c74e597b1b9b59cd43375490af9e77dad10d183&scene=21#wechat_redirect">C语言零基础入门—函数-01</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484186&idx=1&sn=d8e4e4a35c81c033ab1d30f1de63b771&chksm=fca93458cbdebd4ebc85a82209026deffaf681545efc68343b0dc5b648b782e99d55d6b94888&scene=21#wechat_redirect">C语言零基础入门—函数-02</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484196&idx=1&sn=a6752bc8686981b77aeaa9bdbe856bae&scene=21#wechat_redirect">C语言零基础入门—函数-03</a></p>
-<h2 id="10-指针"><a href="#10-指针" class="headerlink" title="10. 指针"></a>10. 指针</h2><ul>
-<li>指针是C语言的精华所在，指针提供给用户可以<strong>直接操作内存地址</strong>的功能，其他语言都是屏蔽了这个功能，正是由于指针的存在C语言才变得强大，同时也是因为指针的存在C语言才变得不安全。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：有一个变量 <code>int a = 3;</code> 平常修改数据的方式是使用变量a来操作的，当使用指针的时候，可以直接找到电脑内存中的这个3所在的地址，直接修改，而不用通过变量a。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>明白指针的工作原理，以及内存原理：</li>
-</ul>
-<blockquote>
-<p>指针就是地址，地址就是内存中存放实际数据的空间。</p>
-</blockquote>
-<ul>
-<li>区分开指针，指针变量的关系：</li>
-</ul>
-<blockquote>
-<p>指针是地址，指针变量是指向指针的一个变量而已。</p>
-</blockquote>
-<p><strong>另注：取地址是 <code>&amp;</code> 符号，取数据是 <code>*</code> 符号。</strong></p>
-<ul>
-<li>使用指针操作简单的数据类型的数据：</li>
-</ul>
-<blockquote>
-<p>使用指针操作int，float，char等简单数据类型。</p>
-</blockquote>
-<ul>
-<li>使用指针操作数组：</li>
-</ul>
-<blockquote>
-<p>使用指针操作一维数组，二维数组。</p>
-</blockquote>
-<ul>
-<li>使用指针在函数之间传递参数：</li>
-</ul>
-<blockquote>
-<p>有了指针之后，函数之间传递数组参数的时候就可以直接把地址传递就可以了。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484241&idx=1&sn=10bf6fd2b542178746a55ee6b359d5ea&scene=21#wechat_redirect">C语言零基础入门-指针-01</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484259&idx=1&sn=4299204e35ce155f0170da17ee9d711e&chksm=fca93421cbdebd3743916eddff99d1e19b0458d871e99b6438cd0bc56cfb41298cb3ddbf2ba8&scene=21#wechat_redirect">C语言零基础入门-指针-02</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484291&idx=1&sn=04d01b4473462870d8b97b3490e02fb0&chksm=fca934c1cbdebdd7c9b6ac991525607350874885ef845819f634cb07dceb95e29d7698e1b308&scene=21#wechat_redirect">C语言零基础入门-指针-03</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484312&idx=1&sn=71df32298473ebf2a19cc8d7594a5c0e&chksm=fca934dacbdebdcc30115c8ca6515d16044d6ac85c3ac0847f9ff8a188c7c0c475e45a8d4b38&scene=21#wechat_redirect">C语言零基础入门-指针-04</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484335&idx=1&sn=88f306b93cf2109366386ba5090afc8c&chksm=fca934edcbdebdfbd04a9eca7bd837a42d790717a59c9feb5d194d289a99f8b40888bce2e5cc&scene=21#wechat_redirect">C语言零基础入门-指针-05</a></p>
-<h2 id="11-结构体"><a href="#11-结构体" class="headerlink" title="11. 结构体"></a>11. 结构体</h2><ul>
-<li>接触越来越多的需求之后，你会发现简单的数据类型int，float，char等等根本不够用了，于是就需要使用结构体自定义一些数据类型来使用。</li>
-</ul>
-<blockquote>
-<p>举一个栗子：我们要自定义一个 student 数据类型，但是C语言中并没有这个数据类型，怎么办呢？我们可以通过结构体将基础的数据类型int，char，数组等等组织起来，形成一个我们自定义的数据类型，并且给他起一个名字叫做 student。这就是自定义的一个数据类型。</p>
-</blockquote>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>需要明白什么是结构体，它是什么作用：</li>
-</ul>
-<blockquote>
-<p>结构体可以自定义数据类型，它通过将基础数据类型int，char，float等等数据类型进行人工拼接，形成一个我们需要的数据类型。</p>
-</blockquote>
-<ul>
-<li>结构体怎么定义与使用：</li>
-</ul>
-<blockquote>
-<p>结构体需要先定义出来才可以使用。</p>
-</blockquote>
-<ul>
-<li>结构体类型的数组，指针怎么定义与使用：</li>
-</ul>
-<blockquote>
-<p>结构体定义出来之后，其实和int的使用基本没什么区别，int可以定义数组，那么结构体当然也可以。int可以定义指针，结构体当然也可以吖。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484364&idx=1&sn=8079f1c6687055518b2a3468a6433903&chksm=fca9348ecbdebd9832e2cb26efbd939c66dd6b30849ab800224ffb0e99a7b85182fe4dbc2394&scene=21#wechat_redirect">C语言零基础入门-结构体-01</a></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484521&idx=1&sn=4943495734463ca4d3289a14ff538d01&chksm=fca9332bcbdeba3d4f929af7669e9e9f04cab780fe3b376fd483fcbe670fd9fe6f59734a962f&scene=21#wechat_redirect">C语言零基础入门-结构体-02</a></p>
-<h2 id="12-文件"><a href="#12-文件" class="headerlink" title="12. 文件"></a>12. 文件</h2><ul>
-<li>最后，所有的编程语言都是可以操作文件的，因为程序运行起来之后的所有数据都是临时的，如果不存放在文件或者数据库中，那么当程序运行结束之后，数据就会消失，目前没有学习数据库，那么就把数据存放在文件中吧。</li>
-</ul>
-<p><strong>这一节需要学会的知识：</strong></p>
-<ul>
-<li>计算机中的路径要有所了解：</li>
-</ul>
-<blockquote>
-<p>相对路径，绝对路径要很熟练。</p>
-</blockquote>
-<ul>
-<li>文件打开，关闭，读写模式要知道：</li>
-</ul>
-<blockquote>
-<p>其实文件打开关闭，读写都是一些模板而已，你记住就可以了。</p>
-</blockquote>
-<p><strong>OK，所有的基础知识，都在这篇文章了。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247484624&idx=1&sn=b0003dec4f05777293ca15e9122ea441&scene=21#wechat_redirect">C语言零基础入门-文件</a></p>
-<h2 id="13-项目"><a href="#13-项目" class="headerlink" title="13. 项目"></a>13. 项目</h2><p>到这里为止，C语言的知识点就更新完了，最终带着大家做了一个小项目，可以看下边的两个连接。</p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ga4y1p71g">C语言学生信息管理系统演示</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Yf4y1e7sz">C语言学生信息管理系统程序讲解</a></p>
-<p><strong>okk，C语言撒花结束。</strong>希望大家多多关注我的公众号与B站哦：<strong>小小猿笔记</strong></p>
-<p><img src="https://gitee.com/xiaoxiaojieya/blogimage/raw/master/img/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81%20(2).jpg" alt="公众号二维码"></p>
+
 
                 
             </div>
@@ -921,7 +615,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.xiaoxiaostudy.tk/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/">http://www.xiaoxiaostudy.tk/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/</a>
+                    <a href="http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/">http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -959,8 +653,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                                    <span class="chip bg-color">C语言</span>
+                                <a href="/tags/Python/">
+                                    <span class="chip bg-color">Python</span>
                                 </a>
                             
                         </div>
@@ -1393,9 +1087,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/">
                     <div class="card-image">
@@ -1413,9 +1108,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1428,6 +1123,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1446,13 +1142,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/12/blog-kai-pian/">
+                <a href="/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Blog开篇">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="C语言系列文章总结">
                         
-                        <span class="card-title">Blog开篇</span>
+                        <span class="card-title">C语言系列文章总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1469,8 +1165,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%B8%AA%E4%BA%BA/" class="post-category">
-                                    个人
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
                                 </a>
                             
                             
@@ -1480,8 +1176,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%A6%82%E8%BF%B0/">
-                        <span class="chip bg-color">概述</span>
+                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
+                        <span class="chip bg-color">C语言</span>
                     </a>
                     
                 </div>

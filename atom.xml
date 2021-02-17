@@ -6,7 +6,7 @@
   <link href="http://www.xiaoxiaostudy.tk/atom.xml" rel="self"/>
   
   <link href="http://www.xiaoxiaostudy.tk/"/>
-  <updated>2021-02-12T04:56:15.005Z</updated>
+  <updated>2021-02-17T05:01:55.738Z</updated>
   <id>http://www.xiaoxiaostudy.tk/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python语言系列文章总结</title>
+    <link href="http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/"/>
+    <id>http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/</id>
+    <published>2021-02-17T05:00:00.000Z</published>
+    <updated>2021-02-17T05:01:55.738Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Python系列文章复习总结&quot;&gt;&lt;a href=&quot;#Python系列文章复习总结&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="Python" scheme="http://www.xiaoxiaostudy.tk/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>C语言系列文章总结</title>
