@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python语言系列文章总结, Java Python AI Code">
+    <meta name="keywords" content="001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入), Java Python AI Code">
     <meta name="description" content="Java Python AI Code CV">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python语言系列文章总结 | 小小博客</title>
+    <title>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入) | 小小博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python语言系列文章总结</h1>
+                    <h1 class="description center-align post-title">001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</h1>
                 </div>
             </div>
         </div>
@@ -454,8 +454,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python/">
-                                <span class="chip bg-color">Python</span>
+                            <a href="/tags/AI/">
+                                <span class="chip bg-color">AI</span>
                             </a>
                         
                     </div>
@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-17
+                    2021-03-03
                 </div>
                 
 
@@ -500,93 +500,389 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Python系列文章复习总结"><a href="#Python系列文章复习总结" class="headerlink" title="Python系列文章复习总结"></a>Python系列文章复习总结</h1><blockquote>
-<p>终于，python文章已经更新完了，这里做出一下总结复习，相当于是整合出一个目录以便大家使用。</p>
-</blockquote>
-<center><b>文章的章节梳理在下文中，针对文章的视频版梳理在B站 (B站账号：小小猿笔记) 。</b></center>
-
-<p>视频版Python语言知识点快速复习连接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QU4y1x7kW">Python语言程序设计基础知识点复习梳理</a></p>
-<blockquote>
-<p><strong>主要内容：</strong></p>
+                <h1 id="001-深度学习Pytorch环境搭建-Anaconda-PyCharm导入"><a href="#001-深度学习Pytorch环境搭建-Anaconda-PyCharm导入" class="headerlink" title="001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)"></a>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</h1><p>在开始搭建之前我们先说一下<strong>本次主要安装的东西有哪些</strong>。</p>
 <ul>
-<li>基础知识 &amp; 环境搭建。</li>
-<li>PyCharm的基础使用。</li>
-<li>Python的基础语法。</li>
-<li>Python的高级语法。</li>
-<li>Python的文件 &amp; 异常。</li>
-<li>飞机大战。</li>
-<li>爬虫初窥。</li>
-</ul>
-</blockquote>
-<h2 id="基础知识-amp-环境搭建"><a href="#基础知识-amp-环境搭建" class="headerlink" title="基础知识 &amp; 环境搭建"></a>基础知识 &amp; 环境搭建</h2><ul>
-<li><p>首先，既然我们来学习<code>Python</code>，那大家肯定对他有着一定的了解，但是我还是觉得有必要再介绍一下Python可以做些什么。</p>
-</li>
-<li><p>然后，python与C语言不太一样，由于win电脑就是C语言写的，所以C语言的程序可以直接在win电脑上执行，然后我们为了方便写代码就安装了VC6.0来敲写代码。</p>
-</li>
-<li><p>但是，python程序是不能直接在win电脑上运行的，所以这个时候就需要安装python的运行环境，让他来执行python程序，同样，为了敲代码方便，所以我们安装PyCharm来敲代码。</p>
-</li>
-</ul>
-<p><strong>至于细节，这篇文章中就有提到。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485130&idx=1&sn=21c753a0a70b46863f57ed0d0cd6747b&chksm=fca93188cbdeb89e2f5e83eed92ea07fde13b378e0864eb522d65b0f6090feba6405b3fe227e&token=1839830084&lang=zh_CN#rd">Python零基础入门-01-基础知识&amp;环境搭建</a> </p>
-<h2 id="PyCharm的基础使用"><a href="#PyCharm的基础使用" class="headerlink" title="PyCharm的基础使用"></a>PyCharm的基础使用</h2><ul>
-<li>首先，PyCharm与VC6.0都只是一个工具而已，他们的目的是用来敲代码，但是PyCharm是一款功能很强大的编译器，不像VC6.0那么简单使用。</li>
-<li>甚至，新手都不知道怎么在PyCharm中找到敲代码的地方，所以这里的文章就会首先给你讲讲这个软件的一些简单用法，让你不至于太恐慌。</li>
-<li>回顾，上篇文章我们提到学习python要装两个东西：python运行环境 以及 pycharm。所以在使用pycharm的时候首先就需要将python运行环境引入到pycharm中，不然你敲完的代码都没法运行的。</li>
-<li>同样，也会教你一些简单的有用的操作。</li>
-</ul>
-<p><strong>至于细节，这篇文章中就有提到。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485165&idx=1&sn=b60fb4170ef5951db79decd4f36f1c04&chksm=fca931afcbdeb8b975e9ced4f3e2943524e181623a41161fb0c386f036ab09729a8e07f64db8&token=1839830084&lang=zh_CN#rd">Python零基础入门-02-PyCharm基础使用</a> </p>
-<h2 id="Python的基础语法"><a href="#Python的基础语法" class="headerlink" title="Python的基础语法"></a>Python的基础语法</h2><ul>
-<li>首先，任何一门编程语言的基础语法都是差不多的，都是一些 <code>数据类型，输入输出，选择循环结构，以及函数文件</code>等等。唯一不同的就是每个编程语言怎么定义这些语法，怎么使用这些语法上，有着区别。python的定义与使用是最简单的。</li>
-<li>然后，这一节就会带着大家了解一些基础的语法，并且掺杂着案例，让大家见一见python的简洁之处。</li>
-</ul>
-<p><strong>至于细节，这篇文章中就有提到。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485249&idx=1&sn=be02f92b7b066177bd7f7b2f7805839e&chksm=fca93003cbdeb9156e6a3569f419dedc533a8a9e4bec4b2d4d61d47c020319fe4f693bb7201c&token=1839830084&lang=zh_CN#rd">Python零基础入门-03-Python基础语法</a> </p>
-<h2 id="Python的高级语法"><a href="#Python的高级语法" class="headerlink" title="Python的高级语法"></a>Python的高级语法</h2><ul>
-<li>首先，刚才说了每个编程语言的基础语法都大相径庭，但是他们的高级语法就各有千秋了，其他的就不说了，这里就会讲一讲python的高级语法。</li>
-<li>然后，任何编程语言的高级语法，不管再怎么多杂，唯一不变的就是，都必须有面向对象的内容。</li>
-<li>最后，什么是面向对象呢？ 面向对象其实是一种思想，并不是具体的语法，大家带着这个疑问就往下看文章吧。</li>
-</ul>
-<p><strong>至于细节，这篇文章中就有提到。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485312&idx=1&sn=aadb0cef5258f6e4da4a5c0a1c6701e1&chksm=fca930c2cbdeb9d48f7b9c5c338f7927f2720fb23bcdf46244628dcba94e863ae71590e531be&token=1839830084&lang=zh_CN#rd">Python零基础入门-04-Python高级语法</a> </p>
-<h2 id="Python的文件-amp-异常"><a href="#Python的文件-amp-异常" class="headerlink" title="Python的文件 &amp; 异常"></a>Python的文件 &amp; 异常</h2><ul>
-<li>首先，前边讲基础语法的时候我们并没有讲文件，因为文件一般都是最后学的，哈哈哈哈。</li>
-<li>文件，其实就是将用户操作完的数据给存到硬盘上，下次用户在用的时候再从文件中读取进来，以达到存档读档的效果。听我讲的热血澎湃的，其实啥也不是，就给你讲讲基础语法而已，哈哈哈哈。</li>
-<li>异常，其实就是为了解决当程序整体出现错误的时候，不让程序崩溃，而提出的一种解决方式。</li>
-</ul>
-<p><strong>至于细节，这篇文章中就有提到。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzU2NjY5ODU0MQ==&mid=2247485384&idx=1&sn=d9c4ef753b1eafc58202676fd9516f21&chksm=fca9308acbdeb99c7478a719d4e10cd42c4e9a0a1cfaba186b299da92e53407c02af487c6353&token=1839830084&lang=zh_CN#rd">Python零基础入门-05-结尾(文件&amp;异常)</a> </p>
-<h2 id="飞机大战"><a href="#飞机大战" class="headerlink" title="飞机大战"></a>飞机大战</h2><ul>
-<li>在上次我推荐的python基础入门书 《python编程从入门到实践》 （在基础知识篇文章最后有提到怎么获取），后边有一个飞机大战的项目，但是我发现他运行不起来了，因为他的好像是基于python2的版本，然而现在都用的python3了，所以有一些语法已经跑不通了。</li>
-<li>然后我自己按照他的思路来实现了一下飞机大战的基础功能，并且给了一些视频的讲解，让大家好理解一点。</li>
+<li><strong>anaconda 3</strong>：第三方包管理软件。</li>
 </ul>
 <blockquote>
-<p><strong>tips</strong>：pygame不要成为你的学习重点，把我的源码弄个下来跑一跑，了解一点代码以及思路就好，重点还是放在下一个爬虫的项目。</p>
+<p>这个玩意可以看作是一个大仓库，他里边含有很多Python的第三方开发库（也就是别人发布的，他收集起来管理）。安装好这个软件之后我们便可以使用这个大仓库来安装一些我们需要的包 （人工智能需要用的包也可以使用这个来装）。</p>
+<p>同时，这个软件也可以管理我们的开发环境，让我们的环境看起来更加的简洁明了。</p>
 </blockquote>
-<p><strong>至于细节，这个视频中就有提到。</strong></p>
 <ul>
-<li>飞机大战B站视频链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1QU4y1x7kW?p=15">python飞机大战</a>.</li>
-<li>飞机大战源码链接：<a target="_blank" rel="noopener" href="https://github.com/xiaoxiaojiea/SharingFolder/tree/main/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%88%86%E4%BA%AB/python%E7%9B%B8%E5%85%B3">公众号分享</a></li>
+<li><strong>安装Pytorch</strong>：深度学习使用的第三方包。</li>
 </ul>
-<h2 id="爬虫初窥"><a href="#爬虫初窥" class="headerlink" title="爬虫初窥"></a>爬虫初窥</h2><ul>
-<li>爬虫可以称之为一个就业方向，各大公司也是有需求的，但是要彻底学会是不太现实的，因为随着爬虫技术的崛起，反爬虫技术也在慢慢发展，现在的网站也是越来越难爬了。</li>
-<li>但是，对于新手来说，需要学些什么，以及每个技术有什么用还是需要有一个清晰的认识的。</li>
-<li>下边的文章以及视频可以给你一个清理明了的学习计划。</li>
-</ul>
-<p><strong>至于细节，这个视频中就有提到。</strong></p>
+<blockquote>
+<p>因为进行人工智能的开发需要进行一系列的求梯度（求导），正向传播，反向传播等等操作，如果每次都是人为的编写，有点太过于复杂了，所以Pytorch就可以理解为是将这些操作封装好的一个第三方库。我们安装好来使用即可。</p>
+</blockquote>
+<h2 id="1-安装anaconda"><a href="#1-安装anaconda" class="headerlink" title="1. 安装anaconda"></a>1. 安装anaconda</h2><blockquote>
+<p>安装包管理软件anaconda，用来管理我们人工智能所需要的包。</p>
+</blockquote>
+<h3 id="1-01-下载anaconda"><a href="#1-01-下载anaconda" class="headerlink" title="1.01 下载anaconda"></a>1.01 下载anaconda</h3><blockquote>
+<p>下载主要通过2种方式：</p>
 <ul>
-<li>爬虫B站视频链接：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Rb4y197s7">Python爬虫快速入门实战教程(附赠进阶教程)</a></li>
-<li>爬虫源码链接：<a target="_blank" rel="noopener" href="https://github.com/xiaoxiaojiea/SharingFolder/tree/main/%E5%85%AC%E4%BC%97%E5%8F%B7%E5%88%86%E4%BA%AB/python%E7%9B%B8%E5%85%B3">公众号分享</a></li>
+<li>官网：<strong>不推荐</strong>，慢到爆炸。</li>
+<li>清华镜像：<strong>推荐</strong>，记得搭配第三方下载软件（不然浏览器下载也挺慢的），比如：迅雷。</li>
 </ul>
-<p><strong>视频中提到的学习资料如下</strong>：</p>
-<ul>
-<li>教程获取方式：关注公众号 “ <strong>小小猿笔记</strong> ”，或者扫下边的码，然后在公众号内部回复 “ <strong>崔庆才爬虫</strong> ”，即可获取。</li>
-<li>最新版爬虫教程链接： <a target="_blank" rel="noopener" href="https://kaiwu.lagou.com/course/courseInfo.htm?courseId=46&sid=460-PC_search_list-0#/sale">52讲轻松搞定网络爬虫</a> . （这个是官网，但是网上<strong>免费版</strong>的资源多的很）</li>
-</ul>
-<img src="https://i.loli.net/2021/02/17/NtvE2ToiLVrfWmg.jpg" alt="公众号二维码" style="zoom:80%;" />
+</blockquote>
+<h4 id="1-01-001-官方下载（不推荐）"><a href="#1-01-001-官方下载（不推荐）" class="headerlink" title="1.01.001 官方下载（不推荐）"></a>1.01.001 官方下载（不推荐）</h4><blockquote>
+<p>这个方式<strong>不推荐</strong>，因为官网是外网，速度挺慢的，但是还是有必要介绍一下官网。</p>
+</blockquote>
+<p><strong>官网下载地址</strong>：<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual">anaconda官方下载地址</a></p>
+<blockquote>
+<p>点进去之后，点击 <code>Download</code> 就会跳转到版本选择页面，选择对应的版本即可。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/Ox5ZscCQgpNEHbT.png" alt="image-20210227204113333" style="zoom:60%;" />
+
+<blockquote>
+<p>选择对应的版本，点击下载即可。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/gWCcGb1t9EhBOmU.png" alt="image-20210227204227111" style="zoom:60%;" />
 
 
 
+<h4 id="1-01-002-清华镜像-推荐"><a href="#1-01-002-清华镜像-推荐" class="headerlink" title="1.01.002 清华镜像(推荐)"></a>1.01.002 清华镜像(推荐)</h4><blockquote>
+<p>anaconda的服务器是在国外，所以直接去它的官网下载，速度会很慢。</p>
+<p>但是，我们国内有一些网站是专门用来收集软件的，<code>清华镜像源</code> 就是清华官方的一个网站，他里边收集了anaconda的安装包，我们可以去他的网站下载，服务器在国内所以速度还算不错。</p>
+</blockquote>
+<p><strong>清华镜像源下载地址</strong>：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D">清华镜像源下载地址</a></p>
+<blockquote>
+<p>进入之后，找到对应的版本 <code>Anaconda3-2020.02-Windows-x86_64.exe</code> ，点击下载即可。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/Nyeoc7fuRKB9XnQ.png" alt="image-20210227205011879" style="zoom:60%;" />
+
+<p><strong>tips</strong>：可以把下载链接赋值入迅雷，下载更快。</p>
+<h3 id="1-02-安装anaconda"><a href="#1-02-安装anaconda" class="headerlink" title="1.02 安装anaconda"></a>1.02 安装anaconda</h3><blockquote>
+<p>下载好了，就安装吧。</p>
+</blockquote>
+<h4 id="1-02-001-安装前提示"><a href="#1-02-001-安装前提示" class="headerlink" title="1.02.001 安装前提示"></a>1.02.001 安装前提示</h4><ul>
+<li>千万别装 <code>C </code>盘。</li>
+<li>安装的位置文件夹路径<strong>千万别</strong>有 <code>空格</code> 以及 <code>中文</code>。</li>
+</ul>
+<h4 id="1-02-002-安装"><a href="#1-02-002-安装" class="headerlink" title="1.02.002 安装"></a>1.02.002 安装</h4><ul>
+<li><strong>step1</strong>：新建一个文件夹，用于安装anaconda。</li>
+</ul>
+<blockquote>
+<p>我这里是在 <code>E</code> 盘下新建一个 <code>Anaconda</code> 文件夹。  </p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/vM3tDyS1fIrwb7T.png" alt="image-20210227205947045" style="zoom:70%;" />
+
+<ul>
+<li><strong>step2</strong>：双击下载好的软件，进行安装。</li>
+</ul>
+<blockquote>
+<p>双击 <code>Anaconda3-2020.02-Windows-x86_64.exe</code>，等他加载，进行安装。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/2fxcarQP1ZpJven.png" alt="image-20210227210109455" style="zoom:80%;" />
+
+<blockquote>
+<p>点击 <code>next</code>.</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/xuegtKU3JqzHv8d.png" alt="image-20210227210210196" style="zoom:80%;" />
+
+
+
+<blockquote>
+<p>点击 <code>I Agree</code>。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/U7FA9kyNOPZEahM.png" alt="image-20210227210302458" style="zoom:80%;" />
+
+
+
+<blockquote>
+<p>选中 <code>All User</code> , 点击 <code>Next</code>。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/lpG2PwSjAkIZoW8.png" alt="image-20210227210426130" style="zoom:80%;" />
+
+<blockquote>
+<p>如果蹦出类似一下的框框，选择 <code>是</code> 即可。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/xIc587oUiJT6dtP.png" alt="image-20210227210517121" style="zoom:80%;" />
+
+
+
+<ul>
+<li><strong>step3</strong>：选择刚才新建的文件夹，点击 <code>Next</code>。</li>
+</ul>
+<blockquote>
+<p>刚才我在 <code>E</code> 盘新建的 <code>Anaconda</code> 文件夹，我选中他就好了，你新建的啥，选中你自己的就好。（<strong>千万不要有中文与空格</strong>）</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/SYQKC6qutRh8svj.png" alt="image-20210227210822161" style="zoom:80%;" />
+
+
+
+<ul>
+<li><strong>step4</strong>：选中添加到环境变量（<strong>一定要选</strong>），然后点击 <code>Install</code>。</li>
+</ul>
+<blockquote>
+<p>等待安装。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/9GihkHemoZUYP2N.png" alt="image-20210227211015732" style="zoom:80%;" />
+
+<blockquote>
+<p>安装完成，点击 <code>Next</code> ，在 <code>Next</code>，</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/XA9GLZKgtJwSpiv.png" alt="image-20210227211120666" style="zoom:80%;" />
+
+<blockquote>
+<p>去点两个勾勾，点击<code>Finish</code></p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/V2iG1zUYvMd4o6q.png" alt="image-20210227211245660" style="zoom:80%;" />
+
+<ul>
+<li><strong>step5</strong>：检查安装是否成功。</li>
+</ul>
+<blockquote>
+<p>按键盘上的 <code>Win + r</code> 键，输入<code>cmd</code> 回车。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/GUfi6K79Ejcyza1.png" alt="image-20210227211452219" style="zoom:80%;" />
+
+<blockquote>
+<p>在出现的黑窗口中输入 <code>conda -V</code> 回车，出现版本号就是安装成功。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/YCuSQbZrWOjTJNv.png" alt="image-20210227211707097" style="zoom:80%;" />
+
+<p><strong>安装完成。</strong></p>
+<h3 id="1-03-切换镜像源"><a href="#1-03-切换镜像源" class="headerlink" title="1.03 切换镜像源"></a>1.03 切换镜像源</h3><blockquote>
+<p>首先需要弄明白什么是切换镜像源，为什么要切换？</p>
+</blockquote>
+<h4 id="1-03-001-镜像源是啥"><a href="#1-03-001-镜像源是啥" class="headerlink" title="1.03.001 镜像源是啥"></a>1.03.001 镜像源是啥</h4><p>刚才我们说了，anaconda是一个大仓库，他里边有很多第三方开发库，但是不幸的是anaconda服务器在国外，如果直接使用anaconda下载第三方库的话，速度会很慢，速度慢到甚至会网络超时从而安装失败。</p>
+<p>所以，我们将anaconda的<strong>下载地址切换为我们国内的服务器</strong>（称之为 镜像源），这样子使用anaconda下载的时候，就不会访问外国服务器下载了。</p>
+<h4 id="1-03-002-切换镜像源"><a href="#1-03-002-切换镜像源" class="headerlink" title="1.03.002 切换镜像源"></a>1.03.002 切换镜像源</h4><ul>
+<li><strong>step1</strong>：在黑窗口输入 <code>conda config --set show_channel_urls yes</code>  并且回车。</li>
+</ul>
+<blockquote>
+<p>这一步的意思就是：我们输入命令，黑窗口会显示我们命令执行的情况。如果不设置，就看不到效果。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/GEjNprSwYJ7RI1m.png" alt="image-20210227213325791" style="zoom:80%;" />
+
+
+
+<ul>
+<li><strong>step2</strong>：在黑窗口后输入 <code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </code> 并且回车。</li>
+</ul>
+<blockquote>
+<p>这一步就是添加清华镜像源。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/PhtyfNa3udvkUoG.png" alt="image-20210227213238696" style="zoom:80%;" />
+
+
+
+<ul>
+<li><strong>step3</strong>：输入 <code>conda config --show channels</code> 并且回车。</li>
+</ul>
+<blockquote>
+<p>看到以下的输出，就是成功。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/02/27/WpqcCmjdUgyBFPz.png" alt="image-20210227213150873" style="zoom:80%;" />
+
+
+
+<h2 id="2-创建Pytorch环境"><a href="#2-创建Pytorch环境" class="headerlink" title="2. 创建Pytorch环境"></a>2. 创建Pytorch环境</h2><blockquote>
+<p>上边已经安装好了anaconda，并且我们也知道anaconda是一个包管理工具，它可以用来管理我们的工作环境。</p>
+<p>然后下边就使用anaconda来创建一下我们的Pytorch工作环境。</p>
+</blockquote>
+<ul>
+<li><strong>step1</strong>：将<code>dos</code>路径进入到<code>anaconda</code>安装路径下的<code>Scripts</code>文件夹下。</li>
+</ul>
+<blockquote>
+<p>首先打开<code>anaconda</code>安装路径下的<code>Scripts</code>文件夹。（我的安装在 <code>E:\Anaconda</code>，所以进入<code>E:\Anaconda\Scripts</code>）</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/ct4uBUMm3o7lTZn.png" alt="image-20210302141535138" style="zoom:80%;" />
+
+<blockquote>
+<p>点击路径后边空白处。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/WIXkLcYtJB9uQFT.png" alt="image-20210302141745832" style="zoom:80%;" />
+
+<blockquote>
+<p>在路径蓝色的情况下，输入<code>cmd</code> , 回车进入 <code>dos</code>。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/ZBG61g4ivjLnoOH.png" alt="image-20210302141907871" style="zoom:80%;" />
+
+<blockquote>
+<p>输入<code>cmd</code>回车</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/02/Bpsm9TuUFdY8ELq.png" alt="image-20210302141943865"></p>
+<blockquote>
+<p>进入<code>dos</code>窗口，并且路径就是 <code>Scripts</code>文件夹所在路径。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/JTkRjnF3aiZwGb1.png" alt="image-20210302142110605" style="zoom:80%;" />
+
+
+
+<ul>
+<li><strong>step2</strong>：创建一个环境，用来安装Pytorch。</li>
+</ul>
+<blockquote>
+<p>输入命令 <code>conda create -n pyTorchEnv python=3.7</code> ，点击回车。</p>
+<p>其中<code>pyTorchEnv </code>是环境的名字，自己定义也可以。</p>
+<p><code>python=3.7</code>是这个环境将使用3.7的python版本。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/2K5plSatCoqLchQ.png" alt="image-20210302143023290" style="zoom:80%;" />
+
+<blockquote>
+<p>这里输入 y 回车。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/59GAhOed6QPEVSb.png" alt="image-20210302143150827" style="zoom:80%;" />
+
+
+
+<blockquote>
+<p>下边的样子就是安装成功。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/8K2EVhgNHp3SFja.png" alt="image-20210302143238654" style="zoom:67%;" />
+
+<ul>
+<li><strong>step3</strong>：查看创建好的环境。</li>
+</ul>
+<blockquote>
+<p>在anaconda安装路径下的envs文件夹下，会出现所有你创建的环境。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/02/Ntuqcr2nJWPdhEg.png" alt="image-20210302143432743"></p>
+<p><strong>这里只显示一个我们刚才安装的 pyTorchEnv 环境，但是还有一个默认的环境 base 也是存在的。</strong></p>
+<ul>
+<li><strong>step4</strong>：激活测试创建好的环境。</li>
+</ul>
+<blockquote>
+<p>先进入创建好的环境<code>pyTorchEnv</code>文件夹中，在进入他的<code>Scripts</code>文件夹中。</p>
+<p><strong>注意：不是 anaconda 的 Scripts 了</strong></p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/dCwU1zYrptZfmEj.png" alt="image-20210302143826238" style="zoom:80%;" />
+
+<blockquote>
+<p>点击路径后边空白处，路径变蓝色之后，输入 <code>cmd</code> 然后回车进入<code>dos</code> 中。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/02/zu3ODBRZbCioVHl.png" alt="image-20210302144044417"></p>
+<blockquote>
+<p>然后输入 <code>activate pyTorchEnv</code>，激活<code>pyTorchEnv</code>环境。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/02/J98kbv3j7oQXPet.png" alt="image-20210302144205852"></p>
+<p><strong>激活成功就没有什么问题了</strong></p>
+<blockquote>
+<p>退出环境：输入<code>deactivate</code> 回车即可。</p>
+</blockquote>
+<h2 id="3-安装Pytorch环境"><a href="#3-安装Pytorch环境" class="headerlink" title="3. 安装Pytorch环境"></a>3. 安装Pytorch环境</h2><blockquote>
+<p>上边已经搭建好了深度学习的环境，接下来只用在这个环境中安装深度学习pytorch需要的库即可。</p>
+</blockquote>
+<ul>
+<li><strong>step1</strong>：使用 <code>dos</code> 进入 <code>pyTorchEnv</code> 环境的 <code>Scripts</code>文件夹，然后激活<code>pyTorchEnv</code>。</li>
+</ul>
+<blockquote>
+<p>方法同上边，找到 <code>pyTorchEnv</code> 中的 <code>Scripts</code> 文件夹，在路径栏输入 <code>cmd</code> 回车进入<code>dos</code>。</p>
+<p>然后使用 <code>activate pyTorchEnv</code> 激活它。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/sA8X7jPSxnrIZGO.png" alt="image-20210302171814638" style="zoom:80%;" />
+
+<ul>
+<li><strong>step2</strong>：到pytorch官网找到安装命令。</li>
+</ul>
+<blockquote>
+<p>官网地址：<a target="_blank" rel="noopener" href="https://pytorch.org/">pytorch官网</a>.</p>
+<p>到官网往下拉，然后配置的好你的版本。 （<strong>这里先不要GPU哦。</strong>）</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/4TAFyKnLIw9WQ3t.png" alt="image-20210302191100142" style="zoom:67%;" />
+
+<ul>
+<li><strong>step3</strong>：将复制的命令放入刚才打开的<code>dos</code>窗口，回车进行安装。</li>
+</ul>
+<blockquote>
+<p>命令：<code>conda install pytorch torchvision torchaudio cpuonly -c pytorch</code> </p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/reInfjwN8BOFs6D.png" alt="image-20210302191349370" style="zoom:67%;" />
+
+<blockquote>
+<p>输入 <code>y</code>回车。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/BcIftyparFgXNQs.png" alt="image-20210302191434824" style="zoom:60%;" />
+
+<blockquote>
+<p>不报错就成功。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/Qr6AMmOjNSC3d4I.png" alt="image-20210302191527567" style="zoom:50%;" />
+
+<ul>
+<li><strong>step4</strong>：</li>
+</ul>
+<blockquote>
+<p>还是进入到<code>pyTorchEnv</code>的<code>Scripts</code>中，进入<code>dos</code>，激活环境。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/02/cbSZrnfHXp8LYwa.png" alt="image-20210302191803342"></p>
+<blockquote>
+<p>输入 python 回车，进入python中。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/NxgXnLGTVBp9m8e.png" alt="image-20210302191915169" style="zoom:67%;" />
+
+<blockquote>
+<p>导入torch包，不报错就是成功。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/eNy7kZH92uL5w6A.png" alt="image-20210302192107486" style="zoom:67%;" />
+
+
+
+<h2 id="4-PyCharm导入Pytorch环境"><a href="#4-PyCharm导入Pytorch环境" class="headerlink" title="4. PyCharm导入Pytorch环境"></a>4. PyCharm导入Pytorch环境</h2><blockquote>
+<p>上边创建好的环境我们需要把他导入PyCharm使用，不然只在黑窗口的话很不方便。所以这里就来演示怎么将<code>pyTorchEnv</code>环境导入PyCharm中使用。</p>
+<p><strong>tips</strong>：</p>
+<ul>
+<li><p>这里我换电脑了，所以这里演示的时候，我的<code>anaconda</code>安装路径是 <code>D:\python\install\anaconda</code>。</p>
+</li>
+<li><p>所以，我的pyTorchEnv文件夹的路径是：<code>D:\python\install\anaconda\envs\pyTorchEnv</code>。</p>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>step1</strong>：新建PyCharm项目。</li>
+</ul>
+<blockquote>
+<p>先打开PyCharm，点击新建。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/puCknK7xJ53De9U.png" alt="image-20210302193546755" style="zoom:80%;" />
+
+<blockquote>
+<p>进入选择 pyTorchEnv。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/asguhyMb15oBPFf.png" alt="image-20210302193755176" style="zoom:80%;" />
+
+<blockquote>
+<p>进入选择。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/dhCMiaStYyQDwv1.png" alt="image-20210302193908507" style="zoom:67%;" />
+
+<blockquote>
+<p>找到 pyTorchEnv 文件夹。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/qrZ6djWDoltCTkA.png" alt="image-20210302194041903" style="zoom:80%;" />
+
+<blockquote>
+<p>然后选中 pyTorchEnv 文件夹中的 python.exe 即可。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/sfHk5pFBvbNDaeY.png" alt="image-20210302194211375" style="zoom:80%;" />
+
+<blockquote>
+<p>在 OK。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/rv4nHiMVg9J5oCs.png" alt="image-20210302194245154" style="zoom:80%;" />
+
+<blockquote>
+<p>切换成功然后就可以了。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/PgZIvjucpFiAJ78.png" alt="image-20210302194414920" style="zoom:80%;" />
+
+<p>等待之后进入到PyCharm界面。</p>
+<ul>
+<li><strong>step2</strong>：测试。</li>
+</ul>
+<blockquote>
+<p>右键单击项目名字，新建一个 python package。然后自己起个名字。</p>
+</blockquote>
+<img src="https://i.loli.net/2021/03/02/MjgDQRpV984hZqf.png" alt="image-20210302194651354" style="zoom:80%;" />
+
+<blockquote>
+<p>在 <code>__init__.py</code> 文件中输入以下代码，运行没报错就ok了。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">print( torch.cuda.is_available() )</span><br></pre></td></tr></table></figure>
+<img src="https://i.loli.net/2021/03/02/RJUI39AVYx1eTCu.png" alt="image-20210302194938426" style="zoom:80%;" />
+
+<p><strong>OK, 搭建完成，以后的代码都是在这里敲。</strong></p>
 
                 
             </div>
@@ -613,7 +909,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/">http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/</a>
+                    <a href="http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/">http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -651,8 +947,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python/">
-                                    <span class="chip bg-color">Python</span>
+                                <a href="/tags/AI/">
+                                    <span class="chip bg-color">AI</span>
                                 </a>
                             
                         </div>
@@ -1085,9 +1381,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/">
                     <div class="card-image">
@@ -1105,9 +1402,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1120,6 +1417,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1138,13 +1436,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/">
+                <a href="/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="C语言系列文章总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python语言系列文章总结">
                         
-                        <span class="card-title">C语言系列文章总结</span>
+                        <span class="card-title">Python语言系列文章总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1155,7 +1453,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
                             </span>
                         <span class="publish-author">
                             
@@ -1172,8 +1470,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/C%E8%AF%AD%E8%A8%80/">
-                        <span class="chip bg-color">C语言</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>

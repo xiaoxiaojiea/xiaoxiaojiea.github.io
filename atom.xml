@@ -6,7 +6,7 @@
   <link href="http://www.xiaoxiaostudy.tk/atom.xml" rel="self"/>
   
   <link href="http://www.xiaoxiaostudy.tk/"/>
-  <updated>2021-02-17T05:09:05.541Z</updated>
+  <updated>2021-03-03T01:50:01.087Z</updated>
   <id>http://www.xiaoxiaostudy.tk/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</title>
+    <link href="http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/"/>
+    <id>http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/</id>
+    <published>2021-03-03T01:49:00.000Z</published>
+    <updated>2021-03-03T01:50:01.087Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;001-深度学习Pytorch环境搭建-Anaconda-PyCharm导入&quot;&gt;&lt;a href=&quot;#001-深度学习Pytorch环境搭建-Anaconda-PyCharm导入&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://www.xiaoxiaostudy.tk/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>Python语言系列文章总结</title>
