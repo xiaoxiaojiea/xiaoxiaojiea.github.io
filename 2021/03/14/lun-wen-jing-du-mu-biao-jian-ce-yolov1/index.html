@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入), Java Python AI Code">
+    <meta name="keywords" content="论文精读-目标检测YOLOV1, Java Python AI Code">
     <meta name="description" content="Java Python AI Code CV">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入) | 小小博客</title>
+    <title>论文精读-目标检测YOLOV1 | 小小博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</h1>
+                    <h1 class="description center-align post-title">论文精读-目标检测YOLOV1</h1>
                 </div>
             </div>
         </div>
@@ -454,8 +454,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/AI/">
-                                <span class="chip bg-color">AI</span>
+                            <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">
+                                <span class="chip bg-color">论文精读</span>
                             </a>
                         
                     </div>
@@ -466,8 +466,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
+                            <a href="/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/" class="post-category">
+                                目标检测
                             </a>
                         
                     </div>
@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-03-14
                 </div>
                 
 
@@ -500,389 +500,152 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="001-深度学习Pytorch环境搭建-Anaconda-PyCharm导入"><a href="#001-深度学习Pytorch环境搭建-Anaconda-PyCharm导入" class="headerlink" title="001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)"></a>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</h1><p>在开始搭建之前我们先说一下<strong>本次主要安装的东西有哪些</strong>。</p>
+                <h2 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h2><blockquote>
+<p>其中绿线是我绘制的图像划分网格。</p>
+<p>这里的loss是我训练的 0.77 ，由于损失函数是我自己写的，所以可能跟大家的不太一样，这个不重要，重要的是学习思路。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/jDaYKel3G51zviX.png"></p>
+<p><img src="https://i.loli.net/2021/03/14/BhnqzdSl1C5ZMHa.png"></p>
+<h2 id="重点提示"><a href="#重点提示" class="headerlink" title="重点提示"></a>重点提示</h2><p><strong><code>yolov1</code>是一个目标检测的算法，他是一阶段的检测算法。</strong></p>
+<blockquote>
+<p>一阶段（<code>one-stage</code>）：检测物体的同时进行分类。（代表论文：<code>yolov1 - yolov5</code>）</p>
+<p>二阶段（<code>two-stage</code>）：先检测出物体，再进行分类。（代表论文：<code>rcnn，fast-rcnn</code>）</p>
+</blockquote>
+<p><strong>重点要理解yolov1的数据特征标注方式。</strong></p>
+<blockquote>
+<p>只有理解了数据特征的标注方式才可以理解他为什么可以起作用。</p>
+</blockquote>
+<h2 id="论文剖析"><a href="#论文剖析" class="headerlink" title="论文剖析"></a>论文剖析</h2><blockquote>
+<p>1、理解<code>VOC</code>数据集的数据形式。</p>
+<p>2、从<code>VOC</code>数据集中提取出标注好的数据特征。</p>
+<p>3、<code>yolov1</code>的数据组织。</p>
+<p>4、<code>yolov1</code>的算法模型。</p>
+<p>5、<code>yolov1</code>的准确率评估方式<code>（IOU）</code>。</p>
+<p>6、<code>yolov1</code>的损失函数。</p>
+</blockquote>
+<h3 id="理解VOC数据集"><a href="#理解VOC数据集" class="headerlink" title="理解VOC数据集"></a>理解VOC数据集</h3><blockquote>
+<p>首先需要知道我们使用的数据集的形式，因为每一个数据集的特征标注以及组织方式都不同。</p>
+</blockquote>
+<p>我们可以去官网下载voc的数据集，这里使用的是<code>voc2012</code>数据集。</p>
+<p><a target="_blank" rel="noopener" href="https://pjreddie.com/projects/pascal-voc-dataset-mirror/">VOC数据集镜像网站</a>.  下载<code>voc2012</code>的<code>Train/Validation Data (1.9 GB)</code>。</p>
+<p>数据集下载之后解压出来是这样子：</p>
+<blockquote>
+<p>每个文件夹存放的啥都标注好了，我们这里用不到那么多。</p>
+<p>我们只用<strong>jpg原图</strong>，以及每个原图中<strong>目标的位置</strong>即可。（下边图片中画红框的两个文件夹）</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/12/CQmRbu1VeDwox7X.png" alt="image-20210312134753503"></p>
+<p><strong>但是我们发现，Annotations文件夹中的目标位置信息是存放在xml中，所以我们往下分析一个xml文件看看。</strong></p>
+<blockquote>
+<p><code>&lt;filename&gt;</code> : 表示这个文件是对应于哪一个 <code>jpg</code> 图片的。</p>
+<p><code>&lt;size&gt;</code>：表示对应的<code> jpg</code> 图片大小。</p>
+<p><code>&lt;object&gt;</code>：就是这个图片中的目标在图片中的信息。包括：目标名字，是否难识别，以及目标在整个图片中的坐标位置。（有几个 object 就是有几个目标）</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/12/F7IPkbuAGtEi853.png" alt="image-20210312135907293"></p>
+<h3 id="提取目标初始数据"><a href="#提取目标初始数据" class="headerlink" title="提取目标初始数据"></a>提取目标初始数据</h3><blockquote>
+<p>上边我们分析出每个图片中有什么目标都是存储在<code>xml</code>文件中的，所以我们需要将<code>xml</code>文件的目标与类别数据提取出来，以便我们使用。</p>
+</blockquote>
+<p><strong>思路：</strong></p>
 <ul>
-<li><strong>anaconda 3</strong>：第三方包管理软件。</li>
-</ul>
-<blockquote>
-<p>这个玩意可以看作是一个大仓库，他里边含有很多Python的第三方开发库（也就是别人发布的，他收集起来管理）。安装好这个软件之后我们便可以使用这个大仓库来安装一些我们需要的包 （人工智能需要用的包也可以使用这个来装）。</p>
-<p>同时，这个软件也可以管理我们的开发环境，让我们的环境看起来更加的简洁明了。</p>
-</blockquote>
-<ul>
-<li><strong>安装Pytorch</strong>：深度学习使用的第三方包。</li>
-</ul>
-<blockquote>
-<p>因为进行人工智能的开发需要进行一系列的求梯度（求导），正向传播，反向传播等等操作，如果每次都是人为的编写，有点太过于复杂了，所以Pytorch就可以理解为是将这些操作封装好的一个第三方库。我们安装好来使用即可。</p>
-</blockquote>
-<h2 id="1-安装anaconda"><a href="#1-安装anaconda" class="headerlink" title="1. 安装anaconda"></a>1. 安装anaconda</h2><blockquote>
-<p>安装包管理软件anaconda，用来管理我们人工智能所需要的包。</p>
-</blockquote>
-<h3 id="1-01-下载anaconda"><a href="#1-01-下载anaconda" class="headerlink" title="1.01 下载anaconda"></a>1.01 下载anaconda</h3><blockquote>
-<p>下载主要通过2种方式：</p>
-<ul>
-<li>官网：<strong>不推荐</strong>，慢到爆炸。</li>
-<li>清华镜像：<strong>推荐</strong>，记得搭配第三方下载软件（不然浏览器下载也挺慢的），比如：迅雷。</li>
-</ul>
-</blockquote>
-<h4 id="1-01-001-官方下载（不推荐）"><a href="#1-01-001-官方下载（不推荐）" class="headerlink" title="1.01.001 官方下载（不推荐）"></a>1.01.001 官方下载（不推荐）</h4><blockquote>
-<p>这个方式<strong>不推荐</strong>，因为官网是外网，速度挺慢的，但是还是有必要介绍一下官网。</p>
-</blockquote>
-<p><strong>官网下载地址</strong>：<a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual">anaconda官方下载地址</a></p>
-<blockquote>
-<p>点进去之后，点击 <code>Download</code> 就会跳转到版本选择页面，选择对应的版本即可。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/Ox5ZscCQgpNEHbT.png" alt="image-20210227204113333" style="zoom:60%;" />
-
-<blockquote>
-<p>选择对应的版本，点击下载即可。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/gWCcGb1t9EhBOmU.png" alt="image-20210227204227111" style="zoom:60%;" />
-
-
-
-<h4 id="1-01-002-清华镜像-推荐"><a href="#1-01-002-清华镜像-推荐" class="headerlink" title="1.01.002 清华镜像(推荐)"></a>1.01.002 清华镜像(推荐)</h4><blockquote>
-<p>anaconda的服务器是在国外，所以直接去它的官网下载，速度会很慢。</p>
-<p>但是，我们国内有一些网站是专门用来收集软件的，<code>清华镜像源</code> 就是清华官方的一个网站，他里边收集了anaconda的安装包，我们可以去他的网站下载，服务器在国内所以速度还算不错。</p>
-</blockquote>
-<p><strong>清华镜像源下载地址</strong>：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/?C=M&O=D">清华镜像源下载地址</a></p>
-<blockquote>
-<p>进入之后，找到对应的版本 <code>Anaconda3-2020.02-Windows-x86_64.exe</code> ，点击下载即可。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/Nyeoc7fuRKB9XnQ.png" alt="image-20210227205011879" style="zoom:60%;" />
-
-<p><strong>tips</strong>：可以把下载链接赋值入迅雷，下载更快。</p>
-<h3 id="1-02-安装anaconda"><a href="#1-02-安装anaconda" class="headerlink" title="1.02 安装anaconda"></a>1.02 安装anaconda</h3><blockquote>
-<p>下载好了，就安装吧。</p>
-</blockquote>
-<h4 id="1-02-001-安装前提示"><a href="#1-02-001-安装前提示" class="headerlink" title="1.02.001 安装前提示"></a>1.02.001 安装前提示</h4><ul>
-<li>千万别装 <code>C </code>盘。</li>
-<li>安装的位置文件夹路径<strong>千万别</strong>有 <code>空格</code> 以及 <code>中文</code>。</li>
-</ul>
-<h4 id="1-02-002-安装"><a href="#1-02-002-安装" class="headerlink" title="1.02.002 安装"></a>1.02.002 安装</h4><ul>
-<li><strong>step1</strong>：新建一个文件夹，用于安装anaconda。</li>
-</ul>
-<blockquote>
-<p>我这里是在 <code>E</code> 盘下新建一个 <code>Anaconda</code> 文件夹。  </p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/vM3tDyS1fIrwb7T.png" alt="image-20210227205947045" style="zoom:70%;" />
-
-<ul>
-<li><strong>step2</strong>：双击下载好的软件，进行安装。</li>
-</ul>
-<blockquote>
-<p>双击 <code>Anaconda3-2020.02-Windows-x86_64.exe</code>，等他加载，进行安装。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/2fxcarQP1ZpJven.png" alt="image-20210227210109455" style="zoom:80%;" />
-
-<blockquote>
-<p>点击 <code>next</code>.</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/xuegtKU3JqzHv8d.png" alt="image-20210227210210196" style="zoom:80%;" />
-
-
-
-<blockquote>
-<p>点击 <code>I Agree</code>。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/U7FA9kyNOPZEahM.png" alt="image-20210227210302458" style="zoom:80%;" />
-
-
-
-<blockquote>
-<p>选中 <code>All User</code> , 点击 <code>Next</code>。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/lpG2PwSjAkIZoW8.png" alt="image-20210227210426130" style="zoom:80%;" />
-
-<blockquote>
-<p>如果蹦出类似一下的框框，选择 <code>是</code> 即可。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/xIc587oUiJT6dtP.png" alt="image-20210227210517121" style="zoom:80%;" />
-
-
-
-<ul>
-<li><strong>step3</strong>：选择刚才新建的文件夹，点击 <code>Next</code>。</li>
-</ul>
-<blockquote>
-<p>刚才我在 <code>E</code> 盘新建的 <code>Anaconda</code> 文件夹，我选中他就好了，你新建的啥，选中你自己的就好。（<strong>千万不要有中文与空格</strong>）</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/SYQKC6qutRh8svj.png" alt="image-20210227210822161" style="zoom:80%;" />
-
-
-
-<ul>
-<li><strong>step4</strong>：选中添加到环境变量（<strong>一定要选</strong>），然后点击 <code>Install</code>。</li>
-</ul>
-<blockquote>
-<p>等待安装。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/9GihkHemoZUYP2N.png" alt="image-20210227211015732" style="zoom:80%;" />
-
-<blockquote>
-<p>安装完成，点击 <code>Next</code> ，在 <code>Next</code>，</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/XA9GLZKgtJwSpiv.png" alt="image-20210227211120666" style="zoom:80%;" />
-
-<blockquote>
-<p>去点两个勾勾，点击<code>Finish</code></p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/V2iG1zUYvMd4o6q.png" alt="image-20210227211245660" style="zoom:80%;" />
-
-<ul>
-<li><strong>step5</strong>：检查安装是否成功。</li>
-</ul>
-<blockquote>
-<p>按键盘上的 <code>Win + r</code> 键，输入<code>cmd</code> 回车。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/GUfi6K79Ejcyza1.png" alt="image-20210227211452219" style="zoom:80%;" />
-
-<blockquote>
-<p>在出现的黑窗口中输入 <code>conda -V</code> 回车，出现版本号就是安装成功。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/YCuSQbZrWOjTJNv.png" alt="image-20210227211707097" style="zoom:80%;" />
-
-<p><strong>安装完成。</strong></p>
-<h3 id="1-03-切换镜像源"><a href="#1-03-切换镜像源" class="headerlink" title="1.03 切换镜像源"></a>1.03 切换镜像源</h3><blockquote>
-<p>首先需要弄明白什么是切换镜像源，为什么要切换？</p>
-</blockquote>
-<h4 id="1-03-001-镜像源是啥"><a href="#1-03-001-镜像源是啥" class="headerlink" title="1.03.001 镜像源是啥"></a>1.03.001 镜像源是啥</h4><p>刚才我们说了，anaconda是一个大仓库，他里边有很多第三方开发库，但是不幸的是anaconda服务器在国外，如果直接使用anaconda下载第三方库的话，速度会很慢，速度慢到甚至会网络超时从而安装失败。</p>
-<p>所以，我们将anaconda的<strong>下载地址切换为我们国内的服务器</strong>（称之为 镜像源），这样子使用anaconda下载的时候，就不会访问外国服务器下载了。</p>
-<h4 id="1-03-002-切换镜像源"><a href="#1-03-002-切换镜像源" class="headerlink" title="1.03.002 切换镜像源"></a>1.03.002 切换镜像源</h4><ul>
-<li><strong>step1</strong>：在黑窗口输入 <code>conda config --set show_channel_urls yes</code>  并且回车。</li>
-</ul>
-<blockquote>
-<p>这一步的意思就是：我们输入命令，黑窗口会显示我们命令执行的情况。如果不设置，就看不到效果。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/GEjNprSwYJ7RI1m.png" alt="image-20210227213325791" style="zoom:80%;" />
-
-
-
-<ul>
-<li><strong>step2</strong>：在黑窗口后输入 <code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ </code> 并且回车。</li>
-</ul>
-<blockquote>
-<p>这一步就是添加清华镜像源。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/PhtyfNa3udvkUoG.png" alt="image-20210227213238696" style="zoom:80%;" />
-
-
-
-<ul>
-<li><strong>step3</strong>：输入 <code>conda config --show channels</code> 并且回车。</li>
-</ul>
-<blockquote>
-<p>看到以下的输出，就是成功。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/02/27/WpqcCmjdUgyBFPz.png" alt="image-20210227213150873" style="zoom:80%;" />
-
-
-
-<h2 id="2-创建Pytorch环境"><a href="#2-创建Pytorch环境" class="headerlink" title="2. 创建Pytorch环境"></a>2. 创建Pytorch环境</h2><blockquote>
-<p>上边已经安装好了anaconda，并且我们也知道anaconda是一个包管理工具，它可以用来管理我们的工作环境。</p>
-<p>然后下边就使用anaconda来创建一下我们的Pytorch工作环境。</p>
-</blockquote>
-<ul>
-<li><strong>step1</strong>：将<code>dos</code>路径进入到<code>anaconda</code>安装路径下的<code>Scripts</code>文件夹下。</li>
-</ul>
-<blockquote>
-<p>首先打开<code>anaconda</code>安装路径下的<code>Scripts</code>文件夹。（我的安装在 <code>E:\Anaconda</code>，所以进入<code>E:\Anaconda\Scripts</code>）</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/ct4uBUMm3o7lTZn.png" alt="image-20210302141535138" style="zoom:80%;" />
-
-<blockquote>
-<p>点击路径后边空白处。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/WIXkLcYtJB9uQFT.png" alt="image-20210302141745832" style="zoom:80%;" />
-
-<blockquote>
-<p>在路径蓝色的情况下，输入<code>cmd</code> , 回车进入 <code>dos</code>。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/ZBG61g4ivjLnoOH.png" alt="image-20210302141907871" style="zoom:80%;" />
-
-<blockquote>
-<p>输入<code>cmd</code>回车</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/03/02/Bpsm9TuUFdY8ELq.png" alt="image-20210302141943865"></p>
-<blockquote>
-<p>进入<code>dos</code>窗口，并且路径就是 <code>Scripts</code>文件夹所在路径。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/JTkRjnF3aiZwGb1.png" alt="image-20210302142110605" style="zoom:80%;" />
-
-
-
-<ul>
-<li><strong>step2</strong>：创建一个环境，用来安装Pytorch。</li>
-</ul>
-<blockquote>
-<p>输入命令 <code>conda create -n pyTorchEnv python=3.7</code> ，点击回车。</p>
-<p>其中<code>pyTorchEnv </code>是环境的名字，自己定义也可以。</p>
-<p><code>python=3.7</code>是这个环境将使用3.7的python版本。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/2K5plSatCoqLchQ.png" alt="image-20210302143023290" style="zoom:80%;" />
-
-<blockquote>
-<p>这里输入 y 回车。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/59GAhOed6QPEVSb.png" alt="image-20210302143150827" style="zoom:80%;" />
-
-
-
-<blockquote>
-<p>下边的样子就是安装成功。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/8K2EVhgNHp3SFja.png" alt="image-20210302143238654" style="zoom:67%;" />
-
-<ul>
-<li><strong>step3</strong>：查看创建好的环境。</li>
-</ul>
-<blockquote>
-<p>在anaconda安装路径下的envs文件夹下，会出现所有你创建的环境。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/03/02/Ntuqcr2nJWPdhEg.png" alt="image-20210302143432743"></p>
-<p><strong>这里只显示一个我们刚才安装的 pyTorchEnv 环境，但是还有一个默认的环境 base 也是存在的。</strong></p>
-<ul>
-<li><strong>step4</strong>：激活测试创建好的环境。</li>
-</ul>
-<blockquote>
-<p>先进入创建好的环境<code>pyTorchEnv</code>文件夹中，在进入他的<code>Scripts</code>文件夹中。</p>
-<p><strong>注意：不是 anaconda 的 Scripts 了</strong></p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/dCwU1zYrptZfmEj.png" alt="image-20210302143826238" style="zoom:80%;" />
-
-<blockquote>
-<p>点击路径后边空白处，路径变蓝色之后，输入 <code>cmd</code> 然后回车进入<code>dos</code> 中。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/03/02/zu3ODBRZbCioVHl.png" alt="image-20210302144044417"></p>
-<blockquote>
-<p>然后输入 <code>activate pyTorchEnv</code>，激活<code>pyTorchEnv</code>环境。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/03/02/J98kbv3j7oQXPet.png" alt="image-20210302144205852"></p>
-<p><strong>激活成功就没有什么问题了</strong></p>
-<blockquote>
-<p>退出环境：输入<code>deactivate</code> 回车即可。</p>
-</blockquote>
-<h2 id="3-安装Pytorch环境"><a href="#3-安装Pytorch环境" class="headerlink" title="3. 安装Pytorch环境"></a>3. 安装Pytorch环境</h2><blockquote>
-<p>上边已经搭建好了深度学习的环境，接下来只用在这个环境中安装深度学习pytorch需要的库即可。</p>
-</blockquote>
-<ul>
-<li><strong>step1</strong>：使用 <code>dos</code> 进入 <code>pyTorchEnv</code> 环境的 <code>Scripts</code>文件夹，然后激活<code>pyTorchEnv</code>。</li>
-</ul>
-<blockquote>
-<p>方法同上边，找到 <code>pyTorchEnv</code> 中的 <code>Scripts</code> 文件夹，在路径栏输入 <code>cmd</code> 回车进入<code>dos</code>。</p>
-<p>然后使用 <code>activate pyTorchEnv</code> 激活它。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/sA8X7jPSxnrIZGO.png" alt="image-20210302171814638" style="zoom:80%;" />
-
-<ul>
-<li><strong>step2</strong>：到pytorch官网找到安装命令。</li>
-</ul>
-<blockquote>
-<p>官网地址：<a target="_blank" rel="noopener" href="https://pytorch.org/">pytorch官网</a>.</p>
-<p>到官网往下拉，然后配置的好你的版本。 （<strong>这里先不要GPU哦。</strong>）</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/4TAFyKnLIw9WQ3t.png" alt="image-20210302191100142" style="zoom:67%;" />
-
-<ul>
-<li><strong>step3</strong>：将复制的命令放入刚才打开的<code>dos</code>窗口，回车进行安装。</li>
-</ul>
-<blockquote>
-<p>命令：<code>conda install pytorch torchvision torchaudio cpuonly -c pytorch</code> </p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/reInfjwN8BOFs6D.png" alt="image-20210302191349370" style="zoom:67%;" />
-
-<blockquote>
-<p>输入 <code>y</code>回车。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/BcIftyparFgXNQs.png" alt="image-20210302191434824" style="zoom:60%;" />
-
-<blockquote>
-<p>不报错就成功。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/Qr6AMmOjNSC3d4I.png" alt="image-20210302191527567" style="zoom:50%;" />
-
-<ul>
-<li><strong>step4</strong>：</li>
-</ul>
-<blockquote>
-<p>还是进入到<code>pyTorchEnv</code>的<code>Scripts</code>中，进入<code>dos</code>，激活环境。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/03/02/cbSZrnfHXp8LYwa.png" alt="image-20210302191803342"></p>
-<blockquote>
-<p>输入 python 回车，进入python中。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/NxgXnLGTVBp9m8e.png" alt="image-20210302191915169" style="zoom:67%;" />
-
-<blockquote>
-<p>导入torch包，不报错就是成功。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/eNy7kZH92uL5w6A.png" alt="image-20210302192107486" style="zoom:67%;" />
-
-
-
-<h2 id="4-PyCharm导入Pytorch环境"><a href="#4-PyCharm导入Pytorch环境" class="headerlink" title="4. PyCharm导入Pytorch环境"></a>4. PyCharm导入Pytorch环境</h2><blockquote>
-<p>上边创建好的环境我们需要把他导入PyCharm使用，不然只在黑窗口的话很不方便。所以这里就来演示怎么将<code>pyTorchEnv</code>环境导入PyCharm中使用。</p>
-<p><strong>tips</strong>：</p>
-<ul>
-<li><p>这里我换电脑了，所以这里演示的时候，我的<code>anaconda</code>安装路径是 <code>D:\python\install\anaconda</code>。</p>
+<li><p>1、使用库 <code>xml.etree.ElementTree</code> 读取xml格式的文件，从中提取出每一个xml文件中的所有<code>&lt;ojgect&gt;</code>标签数据（个数就是目标的数量）。</p>
 </li>
-<li><p>所以，我的pyTorchEnv文件夹的路径是：<code>D:\python\install\anaconda\envs\pyTorchEnv</code>。</p>
+<li><p>2、将<code>&lt;object&gt;</code>标签提取出 <code>类别</code>、<code>xmin</code>、<code>ymin</code>、<code>xmax</code>、<code>ymax</code> ，并且将其归一化为 <code>类别、x、y、w、h</code>。</p>
 </li>
 </ul>
+<blockquote>
+<p>归一化就是根据从目标中提取出的 <code>xmin</code>、<code>ymin</code>、<code>xmax</code>、<code>ymax</code> 得到目标的宽高，分别除以整个图片的宽高。</p>
+<p><code>x</code>：目标的中心位置<code>x</code>坐标。 <code>y</code>：目标的中心位置<code>y</code>坐标。 <code>w</code>：目标的宽度，<code>h</code>：目标的高度。</p>
 </blockquote>
 <ul>
-<li><strong>step1</strong>：新建PyCharm项目。</li>
+<li>3、然后将归一化的数据按照上面的格式，整理为labels文件。</li>
 </ul>
 <blockquote>
-<p>先打开PyCharm，点击新建。</p>
+<p>每一个<code>labels</code>文件对应于一个图片，<code>labels</code>文件中的每一行就是这个图片中的一个目标的 <code>类别、x、y、w、h</code> 数据（一个图片有几个目标，对应的labels文件就有几行）。</p>
 </blockquote>
-<img src="https://i.loli.net/2021/03/02/puCknK7xJ53De9U.png" alt="image-20210302193546755" style="zoom:80%;" />
-
+<p><strong>例子：</strong></p>
 <blockquote>
-<p>进入选择 pyTorchEnv。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/asguhyMb15oBPFf.png" alt="image-20210302193755176" style="zoom:80%;" />
-
-<blockquote>
-<p>进入选择。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/dhCMiaStYyQDwv1.png" alt="image-20210302193908507" style="zoom:67%;" />
-
-<blockquote>
-<p>找到 pyTorchEnv 文件夹。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/qrZ6djWDoltCTkA.png" alt="image-20210302194041903" style="zoom:80%;" />
-
-<blockquote>
-<p>然后选中 pyTorchEnv 文件夹中的 python.exe 即可。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/sfHk5pFBvbNDaeY.png" alt="image-20210302194211375" style="zoom:80%;" />
-
-<blockquote>
-<p>在 OK。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/rv4nHiMVg9J5oCs.png" alt="image-20210302194245154" style="zoom:80%;" />
-
-<blockquote>
-<p>切换成功然后就可以了。</p>
-</blockquote>
-<img src="https://i.loli.net/2021/03/02/PgZIvjucpFiAJ78.png" alt="image-20210302194414920" style="zoom:80%;" />
-
-<p>等待之后进入到PyCharm界面。</p>
+<p>针对如下xml文件，可以得知：</p>
 <ul>
-<li><strong>step2</strong>：测试。</li>
+<li>对应的<code>jpg</code>图片是 <code>2007_000042.jpg</code>，并且图片的大小是 <code>500*335</code> 的三色图（这里的图片大小就是用来归一化的）。</li>
+<li>含有两个<code>&lt;object&gt;</code>标签，所以这个图片中有两个目标，并且目标的类别、位置坐标可以根据<code>name</code>、<code>xmin</code>、<code>ymin</code>、<code>xmax</code>、<code>ymax</code> 得到。</li>
 </ul>
-<blockquote>
-<p>右键单击项目名字，新建一个 python package。然后自己起个名字。</p>
 </blockquote>
-<img src="https://i.loli.net/2021/03/02/MjgDQRpV984hZqf.png" alt="image-20210302194651354" style="zoom:80%;" />
-
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">annotation</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">folder</span>&gt;</span>VOC2012<span class="tag">&lt;/<span class="name">folder</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">filename</span>&gt;</span>2007_000042.jpg<span class="tag">&lt;/<span class="name">filename</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">source</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">database</span>&gt;</span>The VOC2007 Database<span class="tag">&lt;/<span class="name">database</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">annotation</span>&gt;</span>PASCAL VOC2007<span class="tag">&lt;/<span class="name">annotation</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">image</span>&gt;</span>flickr<span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">size</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">width</span>&gt;</span>500<span class="tag">&lt;/<span class="name">width</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">height</span>&gt;</span>335<span class="tag">&lt;/<span class="name">height</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">depth</span>&gt;</span>3<span class="tag">&lt;/<span class="name">depth</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">size</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">segmented</span>&gt;</span>1<span class="tag">&lt;/<span class="name">segmented</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">object</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>train<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">pose</span>&gt;</span>Unspecified<span class="tag">&lt;/<span class="name">pose</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">truncated</span>&gt;</span>1<span class="tag">&lt;/<span class="name">truncated</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">difficult</span>&gt;</span>0<span class="tag">&lt;/<span class="name">difficult</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">bndbox</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">xmin</span>&gt;</span>263<span class="tag">&lt;/<span class="name">xmin</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ymin</span>&gt;</span>32<span class="tag">&lt;/<span class="name">ymin</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">xmax</span>&gt;</span>500<span class="tag">&lt;/<span class="name">xmax</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ymax</span>&gt;</span>295<span class="tag">&lt;/<span class="name">ymax</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">bndbox</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">object</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">object</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">name</span>&gt;</span>train<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">pose</span>&gt;</span>Unspecified<span class="tag">&lt;/<span class="name">pose</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">truncated</span>&gt;</span>1<span class="tag">&lt;/<span class="name">truncated</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">difficult</span>&gt;</span>0<span class="tag">&lt;/<span class="name">difficult</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">bndbox</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">xmin</span>&gt;</span>1<span class="tag">&lt;/<span class="name">xmin</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ymin</span>&gt;</span>36<span class="tag">&lt;/<span class="name">ymin</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">xmax</span>&gt;</span>235<span class="tag">&lt;/<span class="name">xmax</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">ymax</span>&gt;</span>299<span class="tag">&lt;/<span class="name">ymax</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">bndbox</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">object</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">annotation</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>在 <code>__init__.py</code> 文件中输入以下代码，运行没报错就ok了。</p>
+<p>大致如下：绿色框 与 蓝色框 分别是两个目标。</p>
 </blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">print( torch.cuda.is_available() )</span><br></pre></td></tr></table></figure>
-<img src="https://i.loli.net/2021/03/02/RJUI39AVYx1eTCu.png" alt="image-20210302194938426" style="zoom:80%;" />
+<p><img src="https://i.loli.net/2021/03/14/1hurCQsf4MEKSdA.png" alt="image-20210314151928675"></p>
+<blockquote>
+<p>使用xml文件中已有数据，得到 labels文件如下：</p>
+<p>其中每一行是一个物体，每行的数据表示的意义是： <code>类别</code>,<code>x</code>,<code>y</code>,<code>w</code>,<code>h</code> . （数据都是归一化过了）</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/BhOMtuIl6RgdroW.png" alt="image-20210314202842390"></p>
+<p><strong>所以，这个就是最初的labels文件的形式。</strong></p>
+<blockquote>
+<p>下一步就是将这个初始labels文件数据形式，组织成可以 直接与对应图片运行 的数据形式。</p>
+</blockquote>
+<h3 id="YOLOV1的数据组织"><a href="#YOLOV1的数据组织" class="headerlink" title="YOLOV1的数据组织"></a>YOLOV1的数据组织</h3><blockquote>
+<p>其实yolo的思想可以用一句话来代替：<strong>将一个张图片划分网格(通常是<code>7*7</code>)，然后找目标的中心落在那个网格中(得到目标中心点坐标)，并且以中心点坐标为参考找出目标边框的宽与高。</strong></p>
+</blockquote>
+<h4 id="将图片进行网格划分"><a href="#将图片进行网格划分" class="headerlink" title="将图片进行网格划分"></a>将图片进行网格划分</h4><blockquote>
+<p>如图，针对图片进行 <code>7*7</code> 的网格划分。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/GhbtKw5rQdplToB.png" alt="image-20210314160519608"></p>
+<h4 id="找目标物体中心落所在的网格"><a href="#找目标物体中心落所在的网格" class="headerlink" title="找目标物体中心落所在的网格"></a>找目标物体中心落所在的网格</h4><blockquote>
+<p>所以这个图片中的两个目标 <code>cat</code> 与 <code>person</code> 的中心点分别落在网格中的<code>（5，1）</code> 与<code>（3，4）</code>两个位置，并且可以知道这个中心点相对于当前网格的坐标（就是紫色框表示的内容）。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/9zEq2IeTNbkU87l.png" alt="image-20210314162931173"></p>
+<h4 id="目标物体的宽高"><a href="#目标物体的宽高" class="headerlink" title="目标物体的宽高"></a>目标物体的宽高</h4><blockquote>
+<p>在物体中心点找出之后，以中心点为坐标找出边框的宽与高即可。</p>
+</blockquote>
+<p><strong>经过上边的分析，我们可以发现</strong>：想要确定一个物体，只要知道它的中心点坐标，以及相对于中心点坐标的物体宽高即可。</p>
+<p><strong>所以</strong>：当我们的模型拿到一张图片之后</p>
+<ul>
+<li>首先，将图片进行网格划分。</li>
+<li>然后，判断每一个小网格中是否有物体。</li>
+<li>如果预测有物体就预测出物体相对于本网格的坐标，以及相对于本坐标的物体宽高。</li>
+</ul>
+<h4 id="labels的组织方式"><a href="#labels的组织方式" class="headerlink" title="labels的组织方式"></a>labels的组织方式</h4><blockquote>
+<p>labels的数据都是来自上边xml中提取的数据。</p>
+</blockquote>
+<p>经过上边yolo运作流程的讲解，可以得知labels数据需要 <strong>针对每一个小网格</strong> 组织出：<code>相对于当前网格中心点的坐标</code>，<code>宽高</code>，<code>预测概率</code>，<code>目标类别</code>。</p>
+<p><strong>其中</strong>：</p>
+<ul>
+<li><strong>预测概率</strong>的值是 1或0，有目标的时候预测值是1，没目标的时候预测值是0。</li>
+<li>这里用20个<strong>类别</strong>，每一个网格预测的目标是什么类别，则对应的类别数字为1，否则为0 （细节见下图）。</li>
+</ul>
+<p><strong>注意：</strong>由于每一个网格中可能会有多个目标的中心点，所以这里的labels组织的时候，将每个格子预测两个中心点。（细节见下图）</p>
+<blockquote>
+<p>这个图是所有网格的数据形式。数据长度为30.</p>
+<p>**这个图中的所有数据都可以根据 上文从xml中提取的数据得到。  **</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/lNbTdsS67UqA2Gc.png" alt="image-20210314173554406"></p>
+<p>由此可知，<strong>每个网格</strong>的labels是由<strong>长度为30</strong>的上述数据组成的；因为我们的图片划分为<code>7*7</code>个网格，所以就是有<code>7*7</code>个长度为30的数据组成整个图片的lables。即整张图片的labels数据形式为：<code>7*7*30</code>。labels数据矩阵如下图所示。</p>
+<p><img src="https://i.loli.net/2021/03/14/6TNiGgEQ9IFcpb4.png" alt="image-20210314201431371"></p>
+<blockquote>
+<p>所以，我们输入网络的数据就是图片转为tensor的数据，<strong>inputs维度为</strong>：[batchsize，3，448，448].</p>
+<p>网络的输入<strong>labels维度为</strong>：[batchsize，30，7，7]. 就是上边的数据矩阵。</p>
+<p><strong>网络的输出</strong>：[batchsize，30，7，7].</p>
+</blockquote>
+<p><strong>ok，上边的数据组织完成，那么接下来就是将组织好的 inputs 与 labels 送入网络训练即可。</strong></p>
+<h3 id="YOLOV1模型"><a href="#YOLOV1模型" class="headerlink" title="YOLOV1模型"></a>YOLOV1模型</h3><ul>
+<li>网络有24个卷积层，然后是2个全连接层，简化了1×1还原层，由3×3个卷积层组成。</li>
+<li>（原文使用的是imageNet作为预处理模型，然后后边的输出重写成所需要的输出。）</li>
+<li>我这里使用的是基于resnet的预处理模型。</li>
+</ul>
+<img src="https://i.loli.net/2021/03/12/TXMDNsHLhSrx38d.png" style="zoom:80%;" />
 
-<p><strong>OK, 搭建完成，以后的代码都是在这里敲。</strong></p>
+
+
+<h3 id="评估标准IOU"><a href="#评估标准IOU" class="headerlink" title="评估标准IOU"></a>评估标准IOU</h3><blockquote>
+<p>IOU就是交并比，因为原来有一个正确的目标边框数据，此时我们预测一个边框数据之后，计算出两个边框相交的面积，在计算出相并的面积，然后求出比值，就是交并比。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/YEBdAseGQSmcL9q.png" alt="image-20210314205253367"></p>
+<p><strong>交并比越 大 ，说明两个框子越相似，说明预测结果越好。最大 IOU=1 ，就是预测框与真实框重合。</strong></p>
+<p><strong>交并比越 小 ，说明两个框子越不相似，说明预测结果越差。最小 IOU=0 ，就是预测框与真实框没有一点相交的地方。</strong></p>
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><blockquote>
+<p>三部分组成。</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/03/14/V819RSagWlhybFf.png" alt="image-20210314210747590"></p>
 
                 
             </div>
@@ -909,7 +672,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/">http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/</a>
+                    <a href="http://www.xiaoxiaostudy.tk/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/">http://www.xiaoxiaostudy.tk/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -947,8 +710,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/AI/">
-                                    <span class="chip bg-color">AI</span>
+                                <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">
+                                    <span class="chip bg-color">论文精读</span>
                                 </a>
                             
                         </div>
@@ -1381,9 +1144,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/">
                     <div class="card-image">
@@ -1401,9 +1165,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1416,6 +1180,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1434,13 +1199,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/">
+                <a href="/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Python语言系列文章总结">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)">
                         
-                        <span class="card-title">Python语言系列文章总结</span>
+                        <span class="card-title">001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1451,7 +1216,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
                             </span>
                         <span class="publish-author">
                             
@@ -1468,8 +1233,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
                     </a>
                     
                 </div>

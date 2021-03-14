@@ -6,7 +6,7 @@
   <link href="http://www.xiaoxiaostudy.tk/atom.xml" rel="self"/>
   
   <link href="http://www.xiaoxiaostudy.tk/"/>
-  <updated>2021-03-03T01:50:01.087Z</updated>
+  <updated>2021-03-14T13:54:06.248Z</updated>
   <id>http://www.xiaoxiaostudy.tk/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论文精读-目标检测YOLOV1</title>
+    <link href="http://www.xiaoxiaostudy.tk/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/"/>
+    <id>http://www.xiaoxiaostudy.tk/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/</id>
+    <published>2021-03-14T13:16:07.000Z</published>
+    <updated>2021-03-14T13:54:06.248Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;结果展示&quot;&gt;&lt;a href=&quot;#结果展示&quot; class=&quot;headerlink&quot; title=&quot;结果展示&quot;&gt;&lt;/a&gt;结果展示&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;其中绿线是我绘制的图像划分网格。&lt;/p&gt;
+&lt;p&gt;这里的loss是我训练的 0.77</summary>
+        
+      
+    
+    
+    
+    <category term="目标检测" scheme="http://www.xiaoxiaostudy.tk/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+    
+    <category term="论文精读" scheme="http://www.xiaoxiaostudy.tk/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</title>
