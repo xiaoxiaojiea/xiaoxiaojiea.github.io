@@ -6,7 +6,7 @@
   <link href="http://www.xiaoxiaostudy.tk/atom.xml" rel="self"/>
   
   <link href="http://www.xiaoxiaostudy.tk/"/>
-  <updated>2021-03-14T13:54:06.248Z</updated>
+  <updated>2021-04-09T07:18:07.576Z</updated>
   <id>http://www.xiaoxiaostudy.tk/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>002-深度学习数学基础(神经网络、梯度下降、损失函数)</title>
+    <link href="http://www.xiaoxiaostudy.tk/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/"/>
+    <id>http://www.xiaoxiaostudy.tk/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/</id>
+    <published>2021-04-09T07:17:30.000Z</published>
+    <updated>2021-04-09T07:18:07.576Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;002-深度学习数学基础-神经网络、梯度下降、损失函数&quot;&gt;&lt;a href=&quot;#002-深度学习数学基础-神经网络、梯度下降、损失函数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://www.xiaoxiaostudy.tk/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>论文精读-目标检测YOLOV1</title>
