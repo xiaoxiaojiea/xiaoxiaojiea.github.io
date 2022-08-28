@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java Python AI Code">
+    <meta name="keywords" content="003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数), Java Python AI Code">
     <meta name="description" content="Java Python AI Code CV">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>小小博客</title>
+    <title>003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数) | 小小博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)</h1>
                 </div>
             </div>
         </div>
@@ -452,12 +452,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/AI/">
+                                <span class="chip bg-color">AI</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                教程
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -519,7 +532,7 @@
 <p>经过这样的代码表示，可以得到的信息是<code>linear1</code>中的参数就是<code>2x3</code>个（其实还有一个偏差，这里就不细讲了），<code>linear2</code>中的参数就是<code>3x1</code>个。这些参数就是待优化求解的参数。</p>
 <h2 id="2-卷积层"><a href="#2-卷积层" class="headerlink" title="2. 卷积层"></a>2. 卷积层</h2><p>上边的全连接层在实际的应用中一般都是用于向量之间的优化（上边的每一层数据都是列向量），但是实际生活中二维数据比较常见，而且再加上全连接层之间的参数量太大了（两个列向量之间全连接，每个连接之间都有一个参数，所以参数两太大了），所以提出了卷积层先处理二维图像，给图像提取深度特征并且降维处理，再使用全连接层提取特征。</p>
 <p><strong>卷积层对图像处理可视化如下：</strong></p>
-<p><img src="C:\Users\12170\AppData\Roaming\Typora\typora-user-images\image-20220821225746205.png" alt="image-20220821225746205"></p>
+<p><img src="./all_images/image-20220821225746205.png"></p>
 <p>从上边的处理流程可以看出来当我们给定一张<code>12*7</code>的图像，给定一个<code>3*3</code>的卷积核，则卷积核的作用就是类似于滑动窗口的方式遍历图像中的所有像素，然后卷积核框中的地方就会将图像像素值与卷积核的权重值相乘，形成一个数据值。</p>
 <p><strong>卷积核对图像数据卷积处理如下图：</strong></p>
 <img src="https://s2.loli.net/2022/08/28/H2hv59uWjYrNVTg.png" alt="image-20220821231543555" style="zoom:80%;" />
@@ -622,7 +635,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/AI/">
+                                    <span class="chip bg-color">AI</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1062,9 +1079,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1079,13 +1096,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            小小
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1299,6 +1328,13 @@
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 

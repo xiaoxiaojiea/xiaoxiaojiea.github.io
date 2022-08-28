@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-28T10:36:35.863Z</updated>
+  <updated>2022-08-28T10:52:19.995Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)</title>
     <link href="http://example.com/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/"/>
     <id>http://example.com/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/</id>
-    <published>2022-08-28T10:35:55.927Z</published>
-    <updated>2022-08-28T10:36:35.863Z</updated>
+    <published>2022-08-28T10:47:30.000Z</published>
+    <updated>2022-08-28T10:52:19.995Z</updated>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
     
   </entry>
   
