@@ -3,11 +3,11 @@
   <title>小小博客</title>
   
   <subtitle>公众号： 小小猿笔记</subtitle>
-  <link href="http://www.xiaoxiaostudy.tk/atom.xml" rel="self"/>
+  <link href="http://example.com/atom.xml" rel="self"/>
   
-  <link href="http://www.xiaoxiaostudy.tk/"/>
-  <updated>2021-04-09T13:47:32.157Z</updated>
-  <id>http://www.xiaoxiaostudy.tk/</id>
+  <link href="http://example.com/"/>
+  <updated>2022-08-28T10:36:35.863Z</updated>
+  <id>http://example.com/</id>
   
   <author>
     <name>小小</name>
@@ -17,9 +17,80 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://example.com/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/"/>
+    <id>http://example.com/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/</id>
+    <published>2022-08-28T10:35:55.927Z</published>
+    <updated>2022-08-28T10:36:35.863Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;003-深度学习编码基础-PyTorch，卷积，池化，全连接，激活函数&quot;&gt;&lt;a href=&quot;#003-深度学习编码基础-PyTorch，卷积，池化，全连接，激活函数&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu18.04安装samba并使用windows连接</title>
+    <link href="http://example.com/2022/04/15/ubuntu18.04-an-zhuang-samba-bing-shi-yong-windows-lian-jie/"/>
+    <id>http://example.com/2022/04/15/ubuntu18.04-an-zhuang-samba-bing-shi-yong-windows-lian-jie/</id>
+    <published>2022-04-15T01:25:00.000Z</published>
+    <updated>2022-04-15T01:27:51.294Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Ubuntu18-04安装samba并使用windows连接&quot;&gt;&lt;a href=&quot;#Ubuntu18-04安装samba并使用windows连接&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="工具教程" scheme="http://example.com/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="工具教程" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文精读-生成对抗GAN</title>
+    <link href="http://example.com/2022/04/08/lun-wen-jing-du-sheng-cheng-dui-kang-gan/"/>
+    <id>http://example.com/2022/04/08/lun-wen-jing-du-sheng-cheng-dui-kang-gan/</id>
+    <published>2022-04-08T01:23:00.000Z</published>
+    <updated>2022-04-08T01:47:17.086Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;论文信息&quot;&gt;&lt;a href=&quot;#论文信息&quot; class=&quot;headerlink&quot; title=&quot;论文信息&quot;&gt;&lt;/a&gt;论文信息&lt;/h1&gt;&lt;p&gt;论文题目：&lt;strong&gt;Generative Adversarial</summary>
+        
+      
+    
+    
+    
+    <category term="生成对抗" scheme="http://example.com/categories/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97/"/>
+    
+    
+    <category term="论文精读" scheme="http://example.com/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>002-深度学习数学基础(神经网络、梯度下降、损失函数)</title>
-    <link href="http://www.xiaoxiaostudy.tk/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/"/>
-    <id>http://www.xiaoxiaostudy.tk/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/</id>
+    <link href="http://example.com/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/"/>
+    <id>http://example.com/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/</id>
     <published>2021-04-09T07:17:30.000Z</published>
     <updated>2021-04-09T13:47:32.157Z</updated>
     
@@ -34,17 +105,17 @@
     
     
     
-    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="AI" scheme="http://www.xiaoxiaostudy.tk/tags/AI/"/>
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
     
   </entry>
   
   <entry>
     <title>论文精读-目标检测YOLOV1</title>
-    <link href="http://www.xiaoxiaostudy.tk/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/"/>
-    <id>http://www.xiaoxiaostudy.tk/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/</id>
+    <link href="http://example.com/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/"/>
+    <id>http://example.com/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/</id>
     <published>2021-03-14T13:16:07.000Z</published>
     <updated>2021-03-14T13:54:06.248Z</updated>
     
@@ -61,17 +132,17 @@
     
     
     
-    <category term="目标检测" scheme="http://www.xiaoxiaostudy.tk/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    <category term="目标检测" scheme="http://example.com/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
     
     
-    <category term="论文精读" scheme="http://www.xiaoxiaostudy.tk/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"/>
+    <category term="论文精读" scheme="http://example.com/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>001-深度学习Pytorch环境搭建(Anaconda , PyCharm导入)</title>
-    <link href="http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/"/>
-    <id>http://www.xiaoxiaostudy.tk/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/</id>
+    <link href="http://example.com/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/"/>
+    <id>http://example.com/2021/03/03/shen-du-xue-xi-pytorch-huan-jing-da-jian/</id>
     <published>2021-03-03T01:49:00.000Z</published>
     <updated>2021-03-03T01:50:01.087Z</updated>
     
@@ -86,17 +157,17 @@
     
     
     
-    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="AI" scheme="http://www.xiaoxiaostudy.tk/tags/AI/"/>
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
     
   </entry>
   
   <entry>
     <title>Python语言系列文章总结</title>
-    <link href="http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/"/>
-    <id>http://www.xiaoxiaostudy.tk/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/</id>
+    <link href="http://example.com/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/"/>
+    <id>http://example.com/2021/02/17/python-xi-lie-wen-zhang-fu-xi-zong-jie/</id>
     <published>2021-02-17T05:00:00.000Z</published>
     <updated>2021-02-17T05:09:05.541Z</updated>
     
@@ -111,17 +182,17 @@
     
     
     
-    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="Python" scheme="http://www.xiaoxiaostudy.tk/tags/Python/"/>
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>C语言系列文章总结</title>
-    <link href="http://www.xiaoxiaostudy.tk/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/"/>
-    <id>http://www.xiaoxiaostudy.tk/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/</id>
+    <link href="http://example.com/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/"/>
+    <id>http://example.com/2021/02/12/c-yu-yan-xi-lie-wen-zhang-zong-jie/</id>
     <published>2021-02-12T04:54:15.000Z</published>
     <updated>2021-02-12T04:56:15.005Z</updated>
     
@@ -136,17 +207,17 @@
     
     
     
-    <category term="教程" scheme="http://www.xiaoxiaostudy.tk/categories/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-    <category term="C语言" scheme="http://www.xiaoxiaostudy.tk/tags/C%E8%AF%AD%E8%A8%80/"/>
+    <category term="C语言" scheme="http://example.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>Blog开篇</title>
-    <link href="http://www.xiaoxiaostudy.tk/2021/02/12/blog-kai-pian/"/>
-    <id>http://www.xiaoxiaostudy.tk/2021/02/12/blog-kai-pian/</id>
+    <link href="http://example.com/2021/02/12/blog-kai-pian/"/>
+    <id>http://example.com/2021/02/12/blog-kai-pian/</id>
     <published>2021-02-12T00:39:07.000Z</published>
     <updated>2021-02-12T01:34:33.623Z</updated>
     
@@ -164,10 +235,10 @@
     
     
     
-    <category term="个人" scheme="http://www.xiaoxiaostudy.tk/categories/%E4%B8%AA%E4%BA%BA/"/>
+    <category term="个人" scheme="http://example.com/categories/%E4%B8%AA%E4%BA%BA/"/>
     
     
-    <category term="概述" scheme="http://www.xiaoxiaostudy.tk/tags/%E6%A6%82%E8%BF%B0/"/>
+    <category term="概述" scheme="http://example.com/tags/%E6%A6%82%E8%BF%B0/"/>
     
   </entry>
   

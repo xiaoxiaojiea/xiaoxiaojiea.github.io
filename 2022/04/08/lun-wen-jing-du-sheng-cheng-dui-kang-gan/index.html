@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="002-深度学习数学基础(神经网络、梯度下降、损失函数), Java Python AI Code">
+    <meta name="keywords" content="论文精读-生成对抗GAN, Java Python AI Code">
     <meta name="description" content="Java Python AI Code CV">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>002-深度学习数学基础(神经网络、梯度下降、损失函数) | 小小博客</title>
+    <title>论文精读-生成对抗GAN | 小小博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -333,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">002-深度学习数学基础(神经网络、梯度下降、损失函数)</h1>
+                    <h1 class="description center-align post-title">论文精读-生成对抗GAN</h1>
                 </div>
             </div>
         </div>
@@ -454,8 +454,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/AI/">
-                                <span class="chip bg-color">AI</span>
+                            <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">
+                                <span class="chip bg-color">论文精读</span>
                             </a>
                         
                     </div>
@@ -466,8 +466,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                教程
+                            <a href="/categories/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97/" class="post-category">
+                                生成对抗
                             </a>
                         
                     </div>
@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-09
+                    2022-04-08
                 </div>
                 
 
@@ -500,343 +500,12 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="002-深度学习数学基础-神经网络、梯度下降、损失函数"><a href="#002-深度学习数学基础-神经网络、梯度下降、损失函数" class="headerlink" title="002-深度学习数学基础(神经网络、梯度下降、损失函数)"></a>002-深度学习数学基础(神经网络、梯度下降、损失函数)</h1><blockquote>
-<p>这里在进入人工智能的讲解之前，你必须知道几个名词，其实也就是要简单了解一下人工智能的数学基础，不然就真的没办法往下讲了。</p>
-</blockquote>
-<p><strong>本节目录如下：</strong></p>
-<ul>
-<li>前言。</li>
-<li>监督学习与无监督学习。</li>
-<li>神经网络。</li>
-<li>损失函数。</li>
-<li>梯度下降。</li>
-</ul>
-<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0. 前言"></a>0. 前言</h2><blockquote>
-<p>人工智能可以归结于一句话：<strong>针对特定的任务，找出合适的数学表达式，然后一直优化表达式，直到这个表达式可以用来预测未来</strong>。</p>
-</blockquote>
-<p><strong>接下来就来一句一句的分析这句话：</strong></p>
-<ul>
-<li><strong>针对特定的任务：</strong></li>
-</ul>
-<p>首先我们需要知道的是，人工智能其实就是为了让计算机看起来像人一样智能，为什么这么说呢？举一个人工智能的例子：</p>
-<blockquote>
-<p>我们人看到一个动物的图片，就可以立刻知道这个动物是猫，还是狗。但是计算机却不可以，如果计算机可以分出类别，那么这就会是一个具有图像分类功能的人工智能小例子。</p>
-</blockquote>
-<p>这里的<code>图像分类</code>就是我们所说的特定任务，这就是我们希望写出一个人工智能的程序来做的事情。</p>
-<p>还有一些其他的常见的任务：<code>人脸识别</code>,<code>目标检测</code>,<code>图像分割</code>,<code>自然语言处理</code> 等等。</p>
-<ul>
-<li><strong>找出合适的数学表达式：</strong></li>
-</ul>
-<p>学过高等数学并且有计算机思维的人都知道，世界中几乎所有的事情都可以用数学函数来表达出来，我们先不管这个数学表达式是离散还是连续，也不管他的次数多高，反正他能达到表示特定任务的一种目的。</p>
-<p>比如说，针对一个西瓜质量好坏的预测任务，可以设出以下的表达式：</p>
-<p><img src="https://i.loli.net/2021/04/09/4YclPwSM8dviqOy.png"></p>
-<p><strong>解释如下：</strong></p>
-<blockquote>
-<p>1、<code>x1，x2，x3</code> 可以看作判断西瓜好坏的判断依据，比如可以是：瓜皮纹路，敲击声音，瓜皮颜色等等。</p>
-<p>2、<code>a，b，c，d​</code> 就是这个表达式的系数，一旦数学表达式定下来了，那么接下来需要做的事情就是找出合适的系数，使得这个表达式可以很好的判断出西瓜质量的好坏。</p>
-</blockquote>
-<p>所以，针对上文提到的特定任务，都可以用数学表达式表示出来，当然，我们会尽可能找简单、高效的表达式。</p>
-<ul>
-<li><strong>一直优化这个表达式：</strong></li>
-</ul>
-<p>上边引出表达式之后，会发现当表达式确定下来之后，就要<strong>寻找合适的系数</strong>了，寻找系数的过程就被称之为训练网络的过程。</p>
-<p>我们优化表达式的重要思想是：<strong>一直调整系数值，使得预测出的数据 与 真实数据之间的差距尽可能的最小。</strong> </p>
-<p>比如：假设<strong>预测的数据</strong>是 <code>f1(x)​</code>，<strong>真实数据</strong>是​<code>y</code>，我们通过一直改变系数的值，来找出可以使得预测数据与真实数据之间距离最小的一组，最小的一组数据就是我们需要的系数。</p>
-<p>其中，距离计算公式可以是如下的表达式：</p>
-<p><img src="https://i.loli.net/2021/04/09/Qunjws9EULK4dOJ.png"></p>
-<p>通过这个表达式，得到的 <code>loss</code> 值就是真实值与预测值之间的距离。</p>
-<p>然后，接下来的优化就是针对这个<code>loss</code> 表达式来进行的，目的就是让<code>loss</code>的值达到最小。</p>
-<p>因为<code>loss</code>值达到最小的时候，就意味着我们的预测值与真实值距离很相近，预测越准确。</p>
-<blockquote>
-<p>这里值得一提的是，这里的<code>loss</code>表达式的优化过程，其实就是将<code>loss</code>公式对函数<code>f(x)</code>的系数求导。</p>
-<p>所以当<code>loss</code>最小的时候，就意味着此时的系数最合适。</p>
-<p>具体的细节往下看。</p>
-</blockquote>
-<ul>
-<li><strong>用优化好的表达式预测未来：</strong></li>
-</ul>
-<p>经过上边的优化，此时函数会得到一个相对好一点的系数，然后就可以使用这个函数来预测未来的事情了。</p>
-<p>这就是达到了人工只能的目的了。</p>
-<p><strong>所以，下边我们就要仔细讨论，数学表达式的构建，距离函数的构建，距离的优化。</strong></p>
-<h2 id="1-神经网络"><a href="#1-神经网络" class="headerlink" title="1. 神经网络"></a>1. 神经网络</h2><blockquote>
-<p>神经网络的英文是：neural network （简称：NN）。</p>
-</blockquote>
-<p>神经网络其实就是变形的数学表达式，它通过拼装基础组件（神经元）来<strong>模拟出数学表达式</strong>。</p>
-<h3 id="1-01-什么是神经网络"><a href="#1-01-什么是神经网络" class="headerlink" title="1.01. 什么是神经网络"></a>1.01. 什么是神经网络</h3><p>一说神经网络，大家首先想到的就是神经元，其实没错，神经网络这个名词就是从神经元这里演变过来的。所以我们做一下类比。</p>
-<h4 id="1-01-001-神经元"><a href="#1-01-001-神经元" class="headerlink" title="1.01.001. 神经元"></a>1.01.001. 神经元</h4><p><img src="https://i.loli.net/2021/03/29/ysg85QiHoOxeWRV.png"></p>
-<p>如图所示，这个图就是我们人体的神经元的放大图。</p>
-<p>通常我们身体的 <code>A</code> 部位发出的命令，要指挥 <code>B</code> 部位响应，就要通过 <code>A</code> 向 <code>B</code> 发出信号。这个信号的强弱影响着 <code>B</code> 反应的强弱。</p>
-<p>所以，这就是神经网络的构思所在：</p>
-<p><strong>构建出一个类似于神经元的结构，上一个节点的输入（A处的控制）  以及权重（信号的强弱）共同决定下一个节点的输出（B处的反应）</strong>。</p>
-<blockquote>
-<p>这句话，现在看不懂没关系，有个印象就好，继续往下看吧。</p>
-</blockquote>
-<h4 id="1-01-002-神经网络"><a href="#1-01-002-神经网络" class="headerlink" title="1.01.002. 神经网络"></a>1.01.002. 神经网络</h4><p><img src="https://i.loli.net/2021/03/29/FczJ3p14VZLlKMO.png"></p>
-<p>如图所示就是一个最简单的神经网络结构，这个结构的数学表达式是：<img src="https://i.loli.net/2021/04/09/XdAKBHbCUQIo9px.png"  style="zoom:70%;" /></p>
-<p>图中的圆圈我们就把他类比于神经元，图中的各个结构解释如下：</p>
-<ul>
-<li><p>其中 <code>X1,X2</code> 就是这个神经网络的<strong>输入</strong>，他相当于就是人体大脑发出的控制命令。</p>
-</li>
-<li><p><code>W1,W2</code> 就是<strong>权重</strong>，他是用来控制不同输入信号占比大小的数据，比如：想让控制<code>X1</code>作用明显一点，那么对应的<code>W1</code>就大一点。</p>
-</li>
-<li><p><code>Y</code> 就是<strong>输出</strong>，他就是输入数据与权重作用之后的最终结果，在神经元中也就是最终对身体某个部位的控制信号。</p>
-</li>
-</ul>
-<h3 id="1-02-神经网络的数学原理"><a href="#1-02-神经网络的数学原理" class="headerlink" title="1.02. 神经网络的数学原理"></a>1.02. 神经网络的数学原理</h3><p>神经网络的数学原理非常简单，简单总结下来就是一句话：<strong>不同的输入</strong>作用于<strong>各自的权重</strong>之后<strong>的和</strong>即为我们需要的结果。</p>
-<blockquote>
-<p>其实就可以大致理解为我们的函数 ： <code>f(x) = a*x1 + b*x2</code>  一样，所谓的权重就是我们方程的系数。</p>
-</blockquote>
-<p>细心的人观察上边的公式就会发现，一<strong>个神经元节点</strong>就可以<strong>归结于一个运算式子</strong>。所以我们这里就来针对上图，分析分析含有一个神经元节点的公式。</p>
-<p><img src="https://i.loli.net/2021/03/29/HLDajpEdmXc6tIe.png"></p>
-<p>从图中可以看得出来，最终的输出结果 <code>Y</code> 是由 <code>输入（X）</code> 以及 <code>权重（W）</code> 共同决定的。</p>
-<p>他们最终的计算结果 <code>Y</code> 其实说白了就是一个计算公式：<code>Y = X1*W1 + X2*W2​</code> ，这个公式的含义大家应该都明白，<strong>给不同的输入 分配不同的权重 ，从而得到想要的结果。</strong> </p>
-<p>这就是神经网络中一个神经元的数学原理，当把神经元的个数增多之后，原理以此类推，只不过是要增加权重<code>W</code>以及输入<code>X</code>的个数而已。</p>
-<p><strong>下边就可以看作是一个，含有两层的神经网络结构。</strong></p>
-<p><img src="https://i.loli.net/2021/03/31/a7NpeEBdL5Wcomv.png"></p>
-<ul>
-<li><p>第一层节点： <code>11</code>，<code>12</code>，<code>13 </code>   。第二层节点： <code>21</code>  。</p>
-</li>
-<li><p>输入： <code>X1</code> ，<code>X2</code> 。  输出 ： <code>Y</code>  。</p>
-</li>
-</ul>
-<p>于是，根据公式：<strong>输出</strong> 等于 <strong>输入</strong>作用于 <strong>权重</strong>， 得出以下推导 ：</p>
-<ul>
-<li>输入： <code>X1</code> ，<code>X2</code> 。</li>
-<li>节点<code>11</code>的值： <img src="https://i.loli.net/2021/04/09/1qwb8Dn7c4FHvJV.png"  style="zoom:70%;" /> .</li>
-<li>节点<code>12</code>的值： <img src="https://i.loli.net/2021/04/09/qkaxWFe4H1b7KjZ.png" style="zoom:70%;" />.</li>
-<li>节点<code>13</code>的值： <img src="https://i.loli.net/2021/04/09/sSjNMoHmGXfK5Fh.png"  style="zoom:70%;" />.</li>
-<li>节点<code>21</code>的值就是最终输出 <code>Y</code> ： <img src="https://i.loli.net/2021/04/09/E7dKWXitOcwQJSk.png"  style="zoom:70%;" /> .</li>
-</ul>
-<p><strong>所以，最终的整合式子为：</strong> </p>
-<p><img src="https://i.loli.net/2021/04/09/R2Y7AgvJdikwSFI.png"></p>
-<p><strong>于是，我们可以发现，类似于这样的堆叠方式，我们可以组合成很多的数学函数。</strong></p>
-<blockquote>
-<p>这就是神经网络，他的目的在于将数学公式堆砌出来，至于为什么要这样堆砌，是因为<strong>这样堆砌计算机计算比较方便</strong>呗。 </p>
-</blockquote>
-<h3 id="1-03-总结"><a href="#1-03-总结" class="headerlink" title="1.03 总结"></a>1.03 总结</h3><p>到目前为止你已经知道了神经网络的由来，并且知道神经网络与数学公式之间的关系。</p>
-<p><strong>此时你需要明确的知识点是：</strong></p>
-<ul>
-<li><strong>人工智能就是使用已有的数据，拟合出一个可以用来预测未来的公式。</strong></li>
-<li><strong>这个公式的系数需要一直调整，从而找出一组最为合适，正确率较高的系数。</strong></li>
-<li><strong>因为系数的寻找需要大量的计算，所以需要将这个公式用神经网络表示出来的，因为在计算机中这样表示的时候计算最为方便。</strong></li>
-</ul>
-<h2 id="2-监督学习与无监督学习"><a href="#2-监督学习与无监督学习" class="headerlink" title="2. 监督学习与无监督学习"></a>2. 监督学习与无监督学习</h2><blockquote>
-<p>这个知识点比较简单，就一些单纯的概念。</p>
-</blockquote>
-<p><strong>监督学习</strong>：就是我们收集到的数据是有标签的。</p>
-<blockquote>
-<p>就是说，我们收集到的数据是已经分好类的。</p>
-<p>比如说：当前当前有一批样本数据，</p>
-<ul>
-<li> <code>x1, x2, x6, x9, x13</code>属于类别<code>y1</code>类。</li>
-<li> <code>x3, x4, x5, x8, x11</code>属于类别<code>y2</code>类。</li>
-<li> <code>x7, x10, x12</code>属于类别<code>y3</code>类。</li>
-</ul>
-</blockquote>
-<p>然后接下来我们使用这些数据的时候，就可以使用已有标签的数据，去拟合出曲线，用以预测未来。</p>
-<p><strong>无监督学习</strong>：我们收集到的数据是无标签的。</p>
-<blockquote>
-<p>就是说，收集到的数据并没有固定的类别，我们需要做的事情就是挖掘数据内部的联系，给他们聚类，找出类别。</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/04/09/bew3KUM8YBiCL69.png"></p>
-<p>如图所示，挖掘出数据内部的联系，让他自动归类。</p>
-<h2 id="3-损失函数"><a href="#3-损失函数" class="headerlink" title="3. 损失函数"></a>3. 损失函数</h2><blockquote>
-<p>上边解释过了，损失函数的作用就是计算 <strong>真实值</strong> 与 <strong>预测值</strong> 之间距离的 （距离其实可以简单理解为两个数据之间的差距）。</p>
-</blockquote>
-<p>这里介绍一些常见的几种损失函数，以供大家入门使用。</p>
-<h3 id="3-01-一些前提"><a href="#3-01-一些前提" class="headerlink" title="3.01. 一些前提"></a>3.01. 一些前提</h3><blockquote>
-<p>这里给定一些大前提，下边的几种损失函数通用的那种。</p>
-</blockquote>
-<ul>
-<li><strong>真实值</strong>：<code>y</code> ，他就是针对某一组输入<code>x</code>的真实标签。</li>
-<li><strong>预测值</strong>：<code>f(x)</code>，他就是针对输入<code>x</code>的预测标签。</li>
-<li><strong>样本数</strong>：<code>m</code>，他就是我们每次输入多少样本进行计算，比如：某一次输入<code>5</code>组<code>x</code>，得到<code>5</code>个预测结果，这里的<code>m=5</code>.</li>
-</ul>
-<h3 id="3-02-绝对值损失函数"><a href="#3-02-绝对值损失函数" class="headerlink" title="3.02. 绝对值损失函数"></a>3.02. 绝对值损失函数</h3><blockquote>
-<p>其实就是简单的计算 真实值 与 预测值 之间的绝对值距离而已。</p>
-</blockquote>
-<p><strong>公式</strong>：</p>
-<p><img src="https://i.loli.net/2021/04/09/5Pc8m176fTxRVEw.png"></p>
-<p><strong>解释</strong>：</p>
-<ul>
-<li><code>J(y,f(x))</code> 的意思就是，这个损失函数的参数是：真是标签<code>y</code> 与 预测数据<code>f(x)</code>  。</li>
-<li><code>J(w,b)​</code> 的意思是，这个损失函数的目的是优化参数 <code>w</code> 与 <code>b</code> 。这里的<code>w</code>，<code>b</code>其实就是系数的矩阵形式。</li>
-<li>后边具体的计算公式就是：输入有<code>m</code>个样本，计算出这<code>m</code>个样本的距离绝对值和，然后再求均值。</li>
-</ul>
-<h3 id="3-03-均方差损失函数"><a href="#3-03-均方差损失函数" class="headerlink" title="3.03 均方差损失函数"></a>3.03 均方差损失函数</h3><blockquote>
-<p>就是将上边式子的绝对值换成平方就好了。</p>
-</blockquote>
-<p><strong>公式：</strong></p>
-<p><img src="https://i.loli.net/2021/04/09/zKNdaCFf1GR2mk4.png"></p>
-<p><strong>解释：</strong></p>
-<ul>
-<li>这里只是将绝对值换成了平方，除以<code>m</code>换成了除以<code>2m</code>。</li>
-</ul>
-<h3 id="3-04-交叉熵损失函数"><a href="#3-04-交叉熵损失函数" class="headerlink" title="3.04 交叉熵损失函数"></a>3.04 交叉熵损失函数</h3><blockquote>
-<p>这个就比较麻烦了，交叉熵损失函数一般用于解决分类问题。</p>
-</blockquote>
-<p><strong>标签</strong>：</p>
-<p>在通常的分类问题中，标签<code>y</code>的取值一般只有 <code>0</code> 或 <code>1</code> 。 </p>
-<blockquote>
-<p>1 表示是当前类别， 0 表示不是当前类别。</p>
-</blockquote>
-<p><strong>公式：</strong></p>
-<p><img src="https://i.loli.net/2021/04/09/2KacujpOY18Z7EW.png"></p>
-<p><strong>解释：</strong></p>
-<ul>
-<li>上边说了，<code>y</code> 与 <code>f(x)</code> 都只能取 <code>1</code> 与 <code>0</code> 中的一种可能性。所以，上述公式的效果就是：</li>
-<li><strong>如果 y与 f(x) 相同，则 J = 0</strong>.</li>
-</ul>
-<blockquote>
-<p>你带入 <code>y=1 , f(x)=1 </code>试试就知道了。</p>
-</blockquote>
-<ul>
-<li><strong>如果 y与 f(x) 不同，则 J = 无穷大</strong>.</li>
-</ul>
-<blockquote>
-<p>你带入 <code>y=1 , f(x)=0 </code>试试就知道了。</p>
-</blockquote>
-<h3 id="3-05-总结"><a href="#3-05-总结" class="headerlink" title="3.05 总结"></a>3.05 总结</h3><p>到这里你已经学习了三种常见的损失函数。</p>
-<p><strong>此时你应该有一个明确的知识点就是：</strong></p>
-<ul>
-<li><strong>损失函数是用来计算真实值与预测值之间距离的。</strong></li>
-<li><strong>当损失函数的值越小就代表着真实值与预测值之间的距离就越小，也就意味着预测的越准。</strong></li>
-</ul>
-<h2 id="4-梯度下降"><a href="#4-梯度下降" class="headerlink" title="4. 梯度下降"></a>4. 梯度下降</h2><blockquote>
-<p>好了好了，上边过完理论知识，这里来一个真真正正的数学内容了，其实不难，看我慢慢分析。</p>
-</blockquote>
-<ul>
-<li>上边我们提到对数学函数优化的时候，只是介绍了理论的知识。</li>
-</ul>
-<blockquote>
-<p>我们知道了损失函数就是衡量预测值与真实值之间距离的公式。</p>
-<p>并且知道，损失函数的值越小，真实值和预测值之间的距离越小，也即：预测的越准。</p>
-</blockquote>
-<ul>
-<li>但是并没有带着大家深入探究如何优化。</li>
-</ul>
-<blockquote>
-<p>也就是没有告诉大家怎么使得损失函数的值越来越小。</p>
-</blockquote>
-<p><strong>其实，这里使用的数学知识就是 ：求偏导</strong></p>
-<h3 id="4-01-数学例子"><a href="#4-01-数学例子" class="headerlink" title="4.01. 数学例子"></a>4.01. 数学例子</h3><blockquote>
-<p>这里以一个简单的数学例子来引入梯度下降的内容。</p>
-</blockquote>
-<ul>
-<li><strong>场景引入</strong></li>
-</ul>
-<blockquote>
-<p>在数学课中我们经常做的一个题型就是：已知一个函数<code>f(x)</code>的表达式，如何求出这个式子的最小值点。</p>
-</blockquote>
-<p>在数学题中我们经常用的方法就是：将函数<code>f(x)</code>对<code>x</code>求导，然后令导数式子为<code>0</code>，求出此时的<code>x</code>的值，即为最小值点的位置。</p>
-<ul>
-<li><strong>具体例子</strong></li>
-</ul>
-<blockquote>
-<p>求函数 <img src="https://i.loli.net/2021/04/09/DlG9apZEqMH7wJm.png"  style="zoom:75%;" /> 的最小值点，并且求出最小值。</p>
-</blockquote>
-<p><strong>对函数求导</strong></p>
-<p><img src="https://i.loli.net/2021/04/09/9mVwujlFiISzhDC.png"></p>
-<p><strong>令导函数为0，求出此时的x</strong></p>
-<p><img src="https://i.loli.net/2021/04/09/adloStYVUqwMC7L.png"></p>
-<p>此时，<code>x = 3</code> 即为函数 <code>f(x)</code> 的最小值点，带入原方程 <code>f(3)= 2*9-12*3+20 = 2</code>.</p>
-<blockquote>
-<p>这个解题过程，想必大家都很熟悉吧。</p>
-</blockquote>
-<p><strong>下边就分析一下这个过程的数学原理了</strong></p>
-<h3 id="4-02-数学例子原理"><a href="#4-02-数学例子原理" class="headerlink" title="4.02. 数学例子原理"></a>4.02. 数学例子原理</h3><blockquote>
-<p>梯度就是导数。</p>
-</blockquote>
-<p>针对上边提到的方程的最小值求解，其实就是求出其梯度（导数）为<code>0</code>的位置，就是其最低点的位置。具体看下图：</p>
-<ul>
-<li>方程  <img src="https://i.loli.net/2021/04/09/WZgIfh6bQCKxEeu.png">  图像如下：</li>
-</ul>
-<p><img src="https://i.loli.net/2021/04/08/6r1CtSWshHFw8nX.png"></p>
-<blockquote>
-<p>从图中可以看出，方程在不同位置的导数方向是不同的，只有在最低点的位置，导数为<code>0</code>，所以可以用导数为<code>0</code>的位置求出最低点。</p>
-</blockquote>
-<p><strong>上边举的例子是一个比较简单的例子，方程中只有一个未知数，但是在真实情况中，往往一个方程有很多未知数。</strong></p>
-<ul>
-<li>比如：<img src="https://i.loli.net/2021/04/09/MQ89EwdszXVG1j4.png">​</li>
-</ul>
-<blockquote>
-<p>此时需要做的事情就是针对每一个变量求偏导，<strong>求出该方程针对每个变量的梯度方向</strong> （梯度方向就是数据变小的方向）。</p>
-</blockquote>
-<p><strong>于是，在方程的每个点上，都有多个梯度方向，最终将这多个方向合并，形成这个点的最终梯度方向 （数据变小的方向）</strong></p>
-<p><img src="https://i.loli.net/2021/04/08/2ejDRG3c8dzqs7P.png"></p>
-<blockquote>
-<p>如图，方程有两个变量<code>x</code>,<code>y</code>，于是在A点针对两个变量求偏导就可以得到各自的梯度方向（两个红色箭头的方向）。</p>
-<p>然后，将两个梯度进行合并，得到最终的梯度方向<code>Z</code> 。<strong>Z方向就是方程在A点数据变小的方向了</strong>。</p>
-</blockquote>
-<h3 id="4-03-完整例子"><a href="#4-03-完整例子" class="headerlink" title="4.03. 完整例子"></a>4.03. 完整例子</h3><blockquote>
-<p>上边讲完原理，这里就举出一个例子，带着大家走一遍梯度下降找最小值的过程。</p>
-</blockquote>
-<p>假设此时的方程已知，并且根据方程绘制出的图像如下。</p>
-<p><img src="https://i.loli.net/2021/04/08/zNKWvU3pgBhdwLi.png"></p>
-<ul>
-<li>刚开始我们位于A点：</li>
-</ul>
-<blockquote>
-<p>1、在A点处针对方程的各个变量求出偏导，于是便可以得到方程针对各个方向的梯度方向。</p>
-<p>2、将A点处各个方向的梯度方向进行合并，形成最终的梯度方向。</p>
-<p>3、最终的梯度方向就是AB方向。</p>
-<p>4、于是向着AB方向走出一段距离，走到了B点。</p>
-</blockquote>
-<ul>
-<li>到达B点： （思路同上）</li>
-</ul>
-<blockquote>
-<p>1、求出B点处各个方向的梯度方向，然后合并所有梯度方向，得到最终的B点处梯度方向 BC。</p>
-<p>2、于是沿着BC方向，走出一段距离，到达C点。</p>
-</blockquote>
-<ul>
-<li>…重复上述过程：</li>
-</ul>
-<blockquote>
-<p>到达某个点之后，求出各方向的偏导数，然后合并得到最终的梯度方向。</p>
-<p>然后沿着合并后的梯度方向走出一段距离到达下一个点。</p>
-<p>然后在一直重复……</p>
-</blockquote>
-<ul>
-<li>到达K点：</li>
-</ul>
-<blockquote>
-<p>K点就是最终的点，这就是优化得到的最重点。</p>
-</blockquote>
-<p><strong>这就是整个找最小点的可视化过程，但是其中提到更新的数学细节并没有提到，所以下边提一下用到的数学更新公式吧</strong></p>
-<h3 id="4-04-更新公式"><a href="#4-04-更新公式" class="headerlink" title="4.04. 更新公式"></a>4.04. 更新公式</h3><blockquote>
-<p>一般我们梯度下降更新的数据只有函数的系数，然后函数的系数可以分为两类：权重（W）+ 偏差（b）</p>
-<p>所以，更新的时候也就针对这两个参数就好了。</p>
-</blockquote>
-<p><strong>变量定义：</strong></p>
-<ul>
-<li><code>W</code> ： 方程的权重。 （可以简单理解为方程变量前面的系数）</li>
-<li><code>b</code> ：方程的偏差。 （可以简单理解为方程中的常数）</li>
-</ul>
-<blockquote>
-<p>比如：<img src="https://i.loli.net/2021/04/09/754KhbwLsFrWMuI.png"> 中，<code>2 , 1</code>就是权重，<code>3</code>就是偏差。</p>
-</blockquote>
-<p><strong>公式：</strong></p>
-<ul>
-<li>更新权重<code>W</code>：<img src="https://i.loli.net/2021/04/09/rP23dmUkzvafX9h.png">.</li>
-</ul>
-<blockquote>
-<p>原始点的权重是 <img src="https://i.loli.net/2021/04/09/XrEqubYQlRvoDpA.png">，原始点此时针对<code>W</code>的梯度方向是<img src="https://i.loli.net/2021/04/09/Pat4Q6iN9d2MAKk.png">.</p>
-<p><code>α</code> 就是一段距离长度（它就是我们上文一直提到的走一段距离）。</p>
-<p>所以 <img src="https://i.loli.net/2021/04/09/7bVpz3hHmOPsZYu.png"> 表达的含义就是沿着 <code>W</code>的梯度走一段长度为 <code>α</code> 的距离。</p>
-<p>然后 <strong>新的<code>W</code></strong> 就是 <strong>旧的<code>W</code></strong> 减去那一段<strong>方向长度</strong>。</p>
-</blockquote>
-<ul>
-<li>更新偏差：<img src="https://i.loli.net/2021/04/09/BSlJLerounPHUdG.png">.</li>
-</ul>
-<blockquote>
-<p>原理同 <code>W</code> .</p>
-</blockquote>
-<p><strong>这就是更新参数的整个梯度下降过程了。</strong></p>
-<h2 id="5-总结"><a href="#5-总结" class="headerlink" title="5. 总结"></a>5. 总结</h2><p>到目前为止，基础的人工智能知识已经基本讲完了，这个时候我们再来仔细品味这句话。</p>
-<p><strong>针对特定的任务，找出合适的数学表达式，然后一直优化表达式，直到这个表达式可以用来预测未来</strong>。</p>
-<p>或许你就会有不一样的体会了。</p>
-<p>ok，下一节就讲一讲Pytorch的基础使用，然后就是最终的手写体数字识别任务了。</p>
+                <h1 id="论文信息"><a href="#论文信息" class="headerlink" title="论文信息"></a>论文信息</h1><p>论文题目：<strong>Generative Adversarial Nets</strong></p>
+<p>年份：<strong>2014</strong></p>
+<p>作者：<strong>Ian J. Goodfellow, Jean Pouget-Abadie , Mehdi Mirza,</strong></p>
+<p>档次：<strong>顶会</strong></p>
+<p>论文pdf：</p>
+<p>论文代码：</p>
 
                 
             </div>
@@ -863,7 +532,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/">http://example.com/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/</a>
+                    <a href="http://example.com/2022/04/08/lun-wen-jing-du-sheng-cheng-dui-kang-gan/">http://example.com/2022/04/08/lun-wen-jing-du-sheng-cheng-dui-kang-gan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -901,8 +570,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/AI/">
-                                    <span class="chip bg-color">AI</span>
+                                <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">
+                                    <span class="chip bg-color">论文精读</span>
                                 </a>
                             
                         </div>
@@ -1339,13 +1008,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/04/08/lun-wen-jing-du-sheng-cheng-dui-kang-gan/">
+                <a href="/2022/04/15/ubuntu18.04-an-zhuang-samba-bing-shi-yong-windows-lian-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="论文精读-生成对抗GAN">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Ubuntu18.04安装samba并使用windows连接">
                         
-                        <span class="card-title">论文精读-生成对抗GAN</span>
+                        <span class="card-title">Ubuntu18.04安装samba并使用windows连接</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1356,14 +1025,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-15
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%88%90%E5%AF%B9%E6%8A%97/" class="post-category">
-                                    生成对抗
+                            <a href="/categories/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/" class="post-category">
+                                    工具教程
                                 </a>
                             
                             
@@ -1373,8 +1042,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">
-                        <span class="chip bg-color">论文精读</span>
+                    <a href="/tags/%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B/">
+                        <span class="chip bg-color">工具教程</span>
                     </a>
                     
                 </div>
@@ -1388,13 +1057,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/14/lun-wen-jing-du-mu-biao-jian-ce-yolov1/">
+                <a href="/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="论文精读-目标检测YOLOV1">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="002-深度学习数学基础(神经网络、梯度下降、损失函数)">
                         
-                        <span class="card-title">论文精读-目标检测YOLOV1</span>
+                        <span class="card-title">002-深度学习数学基础(神经网络、梯度下降、损失函数)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1405,14 +1074,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-14
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/" class="post-category">
-                                    目标检测
+                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
+                                    教程
                                 </a>
                             
                             
@@ -1422,8 +1091,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%AE%BA%E6%96%87%E7%B2%BE%E8%AF%BB/">
-                        <span class="chip bg-color">论文精读</span>
+                    <a href="/tags/AI/">
+                        <span class="chip bg-color">AI</span>
                     </a>
                     
                 </div>
@@ -1591,13 +1260,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
