@@ -532,7 +532,7 @@
 <p>经过这样的代码表示，可以得到的信息是<code>linear1</code>中的参数就是<code>2x3</code>个（其实还有一个偏差，这里就不细讲了），<code>linear2</code>中的参数就是<code>3x1</code>个。这些参数就是待优化求解的参数。</p>
 <h2 id="2-卷积层"><a href="#2-卷积层" class="headerlink" title="2. 卷积层"></a>2. 卷积层</h2><p>上边的全连接层在实际的应用中一般都是用于向量之间的优化（上边的每一层数据都是列向量），但是实际生活中二维数据比较常见，而且再加上全连接层之间的参数量太大了（两个列向量之间全连接，每个连接之间都有一个参数，所以参数两太大了），所以提出了卷积层先处理二维图像，给图像提取深度特征并且降维处理，再使用全连接层提取特征。</p>
 <p><strong>卷积层对图像处理可视化如下：</strong></p>
-<p><img src="./all_images/image-20220821225746205.png"></p>
+<p><img src="https://raw.githubusercontent.com/xiaoxiaojiea/img_bed/main/img/image-20220821225746205.png"></p>
 <p>从上边的处理流程可以看出来当我们给定一张<code>12*7</code>的图像，给定一个<code>3*3</code>的卷积核，则卷积核的作用就是类似于滑动窗口的方式遍历图像中的所有像素，然后卷积核框中的地方就会将图像像素值与卷积核的权重值相乘，形成一个数据值。</p>
 <p><strong>卷积核对图像数据卷积处理如下图：</strong></p>
 <img src="https://s2.loli.net/2022/08/28/H2hv59uWjYrNVTg.png" alt="image-20220821231543555" style="zoom:80%;" />
@@ -1070,18 +1070,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/">
+                <a href="/2022/09/03/tensorrt7-cuda10.2-cudnn7.6-huan-jing-pei-zhi-yu-yang-li-yun-xing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="tensorrt7+cuda10.2+cudnn7.6环境配置与样例运行">
                         
-                        <span class="card-title">003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)</span>
+                        <span class="card-title">tensorrt7+cuda10.2+cudnn7.6环境配置与样例运行</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1091,27 +1090,26 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-09-03
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%95%99%E7%A8%8B/" class="post-category">
-                                    教程
+                            <a href="/categories/%E7%AC%94%E8%AE%B0%E6%9D%82%E6%96%87/" class="post-category">
+                                    笔记杂文
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/AI/">
-                        <span class="chip bg-color">AI</span>
+                    <a href="/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/">
+                        <span class="chip bg-color">模型部署</span>
                     </a>
                     
                 </div>
@@ -1344,7 +1342,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2021-2022</span>
+                <span id="year">2021-2023</span>
             
             <span id="year">2021</span>
             <a href="/about" target="_blank">小小</a>

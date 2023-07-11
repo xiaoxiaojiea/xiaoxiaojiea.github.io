@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-28T10:52:19.995Z</updated>
+  <updated>2022-09-05T03:28:29.249Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ncnn安装与样例代码跑通</title>
+    <link href="http://example.com/2022/09/05/ncnn-an-zhuang-yu-yang-li-dai-ma-pao-tong/"/>
+    <id>http://example.com/2022/09/05/ncnn-an-zhuang-yu-yang-li-dai-ma-pao-tong/</id>
+    <published>2022-09-05T03:28:15.000Z</published>
+    <updated>2022-09-05T03:28:29.249Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ncnn安装与样例代码跑通&quot;&gt;&lt;a href=&quot;#ncnn安装与样例代码跑通&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记杂文" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0%E6%9D%82%E6%96%87/"/>
+    
+    
+    <category term="模型部署" scheme="http://example.com/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tensorrt7+cuda10.2+cudnn7.6环境配置与样例运行</title>
+    <link href="http://example.com/2022/09/03/tensorrt7-cuda10.2-cudnn7.6-huan-jing-pei-zhi-yu-yang-li-yun-xing/"/>
+    <id>http://example.com/2022/09/03/tensorrt7-cuda10.2-cudnn7.6-huan-jing-pei-zhi-yu-yang-li-yun-xing/</id>
+    <published>2022-09-03T13:17:15.000Z</published>
+    <updated>2022-09-05T03:28:17.812Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;tensorrt7-cuda10-2-cudnn7-6环境配置与样例运行&quot;&gt;&lt;a href=&quot;#tensorrt7-cuda10-2-cudnn7-6环境配置与样例运行&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="笔记杂文" scheme="http://example.com/categories/%E7%AC%94%E8%AE%B0%E6%9D%82%E6%96%87/"/>
+    
+    
+    <category term="模型部署" scheme="http://example.com/tags/%E6%A8%A1%E5%9E%8B%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>003-深度学习编码基础(PyTorch，卷积，池化，全连接，激活函数)</title>
     <link href="http://example.com/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/"/>
     <id>http://example.com/2022/08/28/shen-du-xue-xi-bian-ma-ji-chu/</id>
     <published>2022-08-28T10:47:30.000Z</published>
-    <updated>2022-08-28T10:52:19.995Z</updated>
+    <updated>2023-07-11T13:47:21.431Z</updated>
     
     
       
