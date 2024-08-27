@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>小小博客</title>
+  <title>小小猿笔记</title>
   
   <subtitle>公众号： 小小猿笔记</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
@@ -146,7 +146,7 @@
     <link href="http://example.com/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/"/>
     <id>http://example.com/2021/04/09/shen-du-xue-xi-shu-xue-ji-chu/</id>
     <published>2021-04-09T07:17:30.000Z</published>
-    <updated>2021-04-09T13:47:32.157Z</updated>
+    <updated>2021-04-09T13:50:07.629Z</updated>
     
     
       
